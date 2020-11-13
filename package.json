@@ -1,6 +1,6 @@
 {
-  "name": "@salesforce/plugin-template",
-  "description": "A template repository for sfdx plugins",
+  "name": "@salesforce/plugin-limits",
+  "description": "commands to display api limits to your org",
   "version": "1.0.0",
   "author": "Salesforce",
   "bugs": "https://github.com/forcedotcom/cli/issues",
@@ -53,7 +53,7 @@
     "/messages",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/salesforcecli/plugin-template",
+  "homepage": "https://github.com/salesforcecli/plugin-limits",
   "keywords": [
     "force",
     "salesforce",
@@ -69,16 +69,21 @@
       "@oclif/plugin-help"
     ],
     "topics": {
-      "hello": {
-        "description": "Commands to say hello."
+      "limits": {
+        "description": "display current org’s limits",
+        "subtopics": {
+          "api": {
+            "description": "display current org’s api limits"
+          }
+        }
       }
     }
   },
-  "repository": "salesforcecli/plugin-template",
+  "repository": "salesforcecli/plugin-limits",
   "scripts": {
     "build": "sf-build",
     "clean": "sf-clean",
-    "clean-all": "-clean all",
+    "clean-all": "sf-clean all",
     "clean:lib": "shx rm -rf lib && shx rm -rf coverage && shx rm -rf .nyc_output && shx rm -f oclif.manifest.json",
     "compile": "sf-compile",
     "docs": "sf-docs",

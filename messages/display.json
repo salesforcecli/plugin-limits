@@ -1,0 +1,4 @@
+{
+  "description": "display current org’s limits",
+  "examples": ["sfdx force:limits:api:display", "sfdx force:limits:api:display -u me@my.org"]
+}
