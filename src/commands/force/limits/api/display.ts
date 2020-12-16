@@ -6,7 +6,7 @@
  */
 import * as os from 'os';
 import { SfdxCommand } from '@salesforce/command';
-import { Connection, Messages, SfdxError } from '@salesforce/core';
+import { Messages, SfdxError } from '@salesforce/core';
 
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@salesforce/plugin-limits', 'display');
@@ -24,7 +24,7 @@ export class LimitsApiDisplayCommand extends SfdxCommand {
 
   public async run(): Promise<ApiLimit[]> {
     try {
-      const conn: Connection = this.org.getConnection();
+      const conn = this.org.getConnection();
       const geturl = `${conn.instanceUrl}/services/data/v${conn.version}/limits`;
       const result = await conn.request(geturl);
       const limits: ApiLimit[] = [];
