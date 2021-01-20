@@ -73,8 +73,8 @@
         "external": true,
         "subtopics": {
           "limits": {
-          "description": "display current org’s limits",
-              "subtopics": {
+            "description": "display current org’s limits",
+            "subtopics": {
               "api": {
                 "description": "display current org’s api limits"
               }
