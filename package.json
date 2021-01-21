@@ -69,11 +69,16 @@
       "@oclif/plugin-help"
     ],
     "topics": {
-      "limits": {
-        "description": "display current org’s limits",
+      "force": {
+        "external": true,
         "subtopics": {
-          "api": {
-            "description": "display current org’s api limits"
+          "limits": {
+            "description": "display current org’s limits",
+            "subtopics": {
+              "api": {
+                "description": "display current org’s api limits"
+              }
+            }
           }
         }
       }
