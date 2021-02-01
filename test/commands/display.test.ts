@@ -51,6 +51,7 @@ describe('force:limits:api:display', () => {
           },
         ];
 
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
         const result = JSON.parse(ctx.stdout).result;
         expect(result).to.deep.equal(expected);
       });
