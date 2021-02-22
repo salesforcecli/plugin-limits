@@ -1,5 +1,7 @@
 # plugin-limits
 
+[![NPM](https://img.shields.io/npm/v/@salesforce/plugin-limits.svg?label=@salesforce/plugin-limits)](https://www.npmjs.com/package/@salesforce/plugin-limits) [![CircleCI](https://circleci.com/gh/salesforcecli/plugin-limits/tree/main.svg?style=shield)](https://circleci.com/gh/salesforcecli/plugin-limits/tree/main) [![Downloads/week](https://img.shields.io/npm/dw/@salesforce/plugin-limits.svg)](https://npmjs.org/package/@salesforce/plugin-limits) [![License](https://img.shields.io/badge/License-BSD%203--Clause-brightgreen.svg)](https://raw.githubusercontent.com/salesforcecli/plugin-limits/main/LICENSE.txt)
+
 A command to display the api limits of your org
 
 This plugin is bundled with the [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli). For more information on the CLI, read the [getting started guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm).
