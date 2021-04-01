@@ -28,7 +28,7 @@ workflows:
           sign: true
           github-release: true
           requires:
-            - test-package
+            - release-management/test-package
           filters:
             branches:
               only: main
