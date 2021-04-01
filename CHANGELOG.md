@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://github.com/salesforcecli/plugin-limits/compare/v1.0.4...v1.0.5) (2021-04-01)
+
+
+### Bug Fixes
+
+* jobs names [skip-validate-pr] ([4103421](https://github.com/salesforcecli/plugin-limits/commit/4103421091618625c08cec33a98682194d43e589))
+* leif .yml merge [skip-validate-pr] ([bdbf265](https://github.com/salesforcecli/plugin-limits/commit/bdbf2658b369ad3053cca3ed50cc3c0cafffcbb1))
+* leif .yml merge [skip-validate-pr] ([42dc4b1](https://github.com/salesforcecli/plugin-limits/commit/42dc4b1ae9308f54efcbe24fab564b135a287e24))
+
 ### [1.0.4](https://github.com/salesforcecli/plugin-limits/compare/v1.0.3...v1.0.4) (2021-02-19)
 
 ### [1.0.3](https://github.com/salesforcecli/plugin-limits/compare/v1.0.2...v1.0.3) (2021-01-21)
