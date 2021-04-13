@@ -17,6 +17,13 @@ type ApiLimit = {
   remaining: number;
 };
 
+interface Result {
+  [key: string]: {
+    Max: number;
+    Remaining: number;
+  };
+}
+
 export class LimitsApiDisplayCommand extends SfdxCommand {
   public static readonly description = messages.getMessage('description');
   public static readonly examples = messages.getMessage('examples').split(os.EOL);
@@ -26,7 +33,7 @@ export class LimitsApiDisplayCommand extends SfdxCommand {
     try {
       const conn = this.org.getConnection();
       const geturl = `${conn.instanceUrl}/services/data/v${conn.version}/limits`;
-      const result = await conn.request(geturl);
+      const result = (await conn.request(geturl)) as Result;
       const limits: ApiLimit[] = [];
 
       Object.keys(result).map((limitName) => {
