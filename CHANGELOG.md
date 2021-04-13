@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/salesforcecli/plugin-limits/compare/v1.0.5...v1.0.6) (2021-04-13)
+
+
+### Bug Fixes
+
+* update help for force:limit:api:display ([86f3f51](https://github.com/salesforcecli/plugin-limits/commit/86f3f519e91fff81e5a1478a0c963e8ce011ce0d))
+
 ### [1.0.5](https://github.com/salesforcecli/plugin-limits/compare/v1.0.4...v1.0.5) (2021-04-01)
 
 

@@ -91,10 +91,13 @@ OPTIONS
   --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
                                                                                     this command invocation
 
+DESCRIPTION
+  When you execute this command in a project, it provides limit information for your default scratch org.
+
 EXAMPLES
   sfdx force:limits:api:display
   sfdx force:limits:api:display -u me@my.org
 ```
 
-_See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.0.4/src/commands/force/limits/api/display.ts)_
+_See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.0.5/src/commands/force/limits/api/display.ts)_
 <!-- commandsstop -->
