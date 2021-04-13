@@ -26,11 +26,11 @@ parameters:
     description: |
       By default, the latest version of the standalone CLI will be installed.
       To install via npm, supply a version tag such as "latest" or "6".
-    default: ''
+    default: ""
     type: string
   repo_tag:
-    description: 'The tag of the module repo to checkout, '''' defaults to branch/PR'
-    default: ''
+    description: "The tag of the module repo to checkout, '' defaults to branch/PR"
+    default: ""
     type: string
 workflows:
   version: 2
@@ -64,6 +64,7 @@ workflows:
           filters:
             branches:
               only: main
+          context: CLI_CTC
   test-ts-update:
     triggers:
       - schedule:
