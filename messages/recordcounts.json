@@ -1,8 +1,8 @@
 {
-  "commandDescription": "print record counts for the given objects",
+  "commandDescription": "display record counts for the specified standard and custom objects",
   "examples": [
     "sfdx force:limits:recordcounts:display -o Account,Contact,Lead,Opportunity",
     "sfdx force:limits:recordcounts:display -o Account,Contact -u me@my.org"
   ],
-  "objectnamesFlagDescription": "comma-separated list of object names for which to print record counts"
+  "objectnamesFlagDescription": "comma-separated list of API names of standard or custom objects for which to display record counts"
 }
