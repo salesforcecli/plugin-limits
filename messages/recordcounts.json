@@ -1,0 +1,8 @@
+{
+  "commandDescription": "print record counts for the given objects",
+  "examples": [
+    "sfdx force:limits:recordcounts:display -o Account,Contact,Lead,Opportunity",
+    "sfdx force:limits:recordcounts:display -o Account,Contact -u me@my.org"
+  ],
+  "objectnamesFlagDescription": "comma-separated list of object names for which to print record counts"
+}

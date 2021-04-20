@@ -1,12 +1,12 @@
 [
-    {
-        "command": "force:limits:api:display",
-        "plugin": "@salesforce/plugin-limits",
-        "flags": [
-            "apiversion",
-            "json",
-            "loglevel",
-            "targetusername"
-        ]
-    }
+  {
+    "command": "force:limits:api:display",
+    "plugin": "@salesforce/plugin-limits",
+    "flags": ["apiversion", "json", "loglevel", "targetusername"]
+  },
+  {
+    "command": "force:limits:recordcounts:display",
+    "plugin": "@salesforce/plugin-limits",
+    "flags": ["apiversion", "json", "loglevel", "targetusername", "objectnames"]
+  }
 ]
