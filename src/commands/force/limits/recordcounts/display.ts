@@ -39,18 +39,18 @@ export class LimitsRecordCountsDisplayCommand extends SfdxCommand {
   };
 
   protected static readonly flagsConfig: FlagsConfig = {
-    objectnames: flags.array({
-      char: 'o',
+    sobjecttypes: flags.array({
+      char: 's',
       required: true,
-      description: messages.getMessage('objectnamesFlagDescription'),
+      description: messages.getMessage('sobjecttypesFlagDescription'),
     }),
   };
 
   public async run(): Promise<RecordCount[]> {
     try {
-      const objectnamesString = (this.flags.objectnames as string[]).join();
+      const sobjecttypesString = (this.flags.sobjecttypes as string[]).join();
       const conn = this.org.getConnection();
-      const geturl = `${conn.instanceUrl}/services/data/v${conn.version}/limits/recordCount?sObjects=${objectnamesString}`;
+      const geturl = `${conn.instanceUrl}/services/data/v${conn.version}/limits/recordCount?sObjects=${sobjecttypesString}`;
       const result = ((await conn.request(geturl)) as unknown) as Result;
 
       return result.sObjects;
