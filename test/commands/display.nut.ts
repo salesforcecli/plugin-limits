@@ -14,7 +14,7 @@ export interface ListApiDisplayOutput {
   result: Array<Record<string, unknown>>;
 }
 
-describe('force:limits:api:display', () => {
+describe('Limits display', () => {
   const env = new Env();
   let username: string;
   let testSession: TestSession;
@@ -36,7 +36,7 @@ describe('force:limits:api:display', () => {
     expect(output.status).to.equal(0);
   });
 
-  it('should authorize an org using jwt (human readable)', () => {
+  it('Displays the limits (human readable)', () => {
     const command = `force:limits:api:display -u ${username}`;
     const result = execCmd(command, { ensureExitCode: 0 });
     const output = getString(result, 'shellOutput.stdout');
