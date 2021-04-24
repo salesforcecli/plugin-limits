@@ -22,7 +22,7 @@ describe('force:limits:recordcounts:display', () => {
     test
       .do(() => prepareStubs())
       .stdout()
-      .command(['force:limits:recordcounts:display', '--objectnames', 'Account,Contact,Lead', '--json'])
+      .command(['force:limits:recordcounts:display', '--sobjecttype', 'Account,Contact,Lead', '--json'])
       .it('displays the expected results correctly', (ctx) => {
         const expected = [
           {
