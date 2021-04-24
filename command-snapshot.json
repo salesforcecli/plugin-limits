@@ -7,6 +7,6 @@
   {
     "command": "force:limits:recordcounts:display",
     "plugin": "@salesforce/plugin-limits",
-    "flags": ["apiversion", "json", "loglevel", "targetusername", "sobjecttypes"]
+    "flags": ["apiversion", "json", "loglevel", "targetusername", "sobjecttype"]
   }
 ]

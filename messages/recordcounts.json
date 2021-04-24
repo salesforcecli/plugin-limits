@@ -4,5 +4,5 @@
     "sfdx force:limits:recordcounts:display -s Account,Contact,Lead,Opportunity",
     "sfdx force:limits:recordcounts:display -s Account,Contact -u me@my.org"
   ],
-  "sobjecttypesFlagDescription": "comma-separated list of API names of standard or custom objects for which to display record counts"
+  "sobjecttypeFlagDescription": "comma-separated list of API names of standard or custom objects for which to display record counts"
 }
