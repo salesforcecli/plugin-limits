@@ -77,6 +77,13 @@ workflows:
             branches:
               only: main
           context: CLI_CTC
+        release-management/test-nut:
+          name: nuts-on-linux
+          sfdx_version: latest
+          os: linux
+          requires:
+            - release-management/test-package
+          context: << pipeline.parameters.context_name >>
       - release-management/test-nut:
           name: nuts-on-windows
           sfdx_version: latest
