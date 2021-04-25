@@ -80,6 +80,32 @@ workflows:
           context: << pipeline.parameters.context_name >>
           requires:
             - release-management/test-package
+        release-management/validate-pr:
+          filters:
+            branches:
+              ignore: main
+      - release-management/release-package:
+          sign: true
+          github-release: true
+          requires:
+            - release-management/test-package
+          filters:
+            branches:
+              only: main
+        release-management/test-nut:
+          name: nuts-on-linux
+          sfdx_version: latest
+          os: linux
+          requires:
+            - release-management/test-package
+          context: << pipeline.parameters.context_name >>
+      - release-management/test-nut:
+          name: nuts-on-windows
+          sfdx_version: latest
+          os: windows
+          requires:
+            - release-management/test-package
+          context: << pipeline.parameters.context_name >>
       - release-management/release-package:
           sign: true
           github-release: true
