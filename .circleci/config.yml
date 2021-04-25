@@ -60,6 +60,13 @@ workflows:
                 node_version: lts
               - os: windows
                 node_version: maintenance
+        release-management/test-nut:
+          name: nuts-on-linux
+          sfdx_version: latest
+          os: linux
+          requires:
+            - release-management/test-package
+          context: << pipeline.parameters.context_name >>
       - release-management/release-package:
           sign: true
           github-release: true
@@ -70,7 +77,7 @@ workflows:
               only: main
           context: CLI_CTC
         release-management/test-nut:
-          name: nuts-on-linux
+          name: nuts-on-windows
           matrix:
             parameters:
               os:
@@ -82,7 +89,7 @@ workflows:
             - release-management/test-package
           context: << pipeline.parameters.context_name >>
           sfdx_version: latest
-          os: linux
+          os: windows
       - release-management/test-nut:
           name: nuts-on-windows
           sfdx_version: latest
@@ -90,6 +97,21 @@ workflows:
           requires:
             - release-management/test-package
           context: << pipeline.parameters.context_name >>
+        release-management/test-package:
+          matrix:
+            parameters:
+              os:
+                - linux
+                - windows
+              node_version:
+                - latest
+                - lts
+                - maintenance
+            exclude:
+              - os: windows
+                node_version: lts
+              - os: windows
+                node_version: maintenance
       - release-management/test-nut:
           name: nuts-on-windows
           sfdx_version: latest
