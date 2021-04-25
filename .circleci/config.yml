@@ -26,11 +26,15 @@ parameters:
     description: |
       By default, the latest version of the standalone CLI will be installed.
       To install via npm, supply a version tag such as "latest" or "6".
-    default: ""
+    default: ''
     type: string
   repo_tag:
-    description: "The tag of the module repo to checkout, '' defaults to branch/PR"
-    default: ""
+    description: The tag of the module repo to checkout, '' defaults to branch/PR
+    default: ''
+    type: string
+  context_name:
+    description: Name of the context devhub name
+    default: gs0
     type: string
 workflows:
   version: 2
