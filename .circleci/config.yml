@@ -70,7 +70,7 @@ workflows:
               only: main
           context: CLI_CTC
         release-management/test-nut:
-          name: nuts-tests-metrix
+          name: nuts-on-linux
           matrix:
             parameters:
               os:
@@ -81,10 +81,12 @@ workflows:
           requires:
             - release-management/test-package
           context: << pipeline.parameters.context_name >>
-      - release-management/test-nut:
-          name: nuts-on-linux
           sfdx_version: latest
           os: linux
+      - release-management/test-nut:
+          name: nuts-on-windows
+          sfdx_version: latest
+          os: windows
           requires:
             - release-management/test-package
           context: << pipeline.parameters.context_name >>
@@ -95,6 +97,14 @@ workflows:
           requires:
             - release-management/test-package
           context: << pipeline.parameters.context_name >>
+        release-management/release-package:
+          sign: true
+          github-release: true
+          requires:
+            - release-management/test-package
+          filters:
+            branches:
+              only: main
       - release-management/release-package:
           sign: true
           github-release: true
