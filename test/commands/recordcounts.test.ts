@@ -22,6 +22,28 @@ describe('force:limits:recordcounts:display', () => {
     test
       .do(() => prepareStubs())
       .stdout()
+      .command(['force:limits:recordcounts:display', '--sobjecttype', 'Account,Contact', '--json'])
+      .it('displays the expected results correctly', (ctx) => {
+        const expected = [
+          {
+            name: 'Account',
+            count: 34,
+          },
+          {
+            name: 'Contact',
+            count: 116,
+          },
+        ];
+
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+        const result = JSON.parse(ctx.stdout).result;
+        expect(result).to.deep.equal(expected);
+      });
+  });
+  it('will add flag option if 0 counted returned', () => {
+    test
+      .do(() => prepareStubs())
+      .stdout()
       .command(['force:limits:recordcounts:display', '--sobjecttype', 'Account,Contact,Lead', '--json'])
       .it('displays the expected results correctly', (ctx) => {
         const expected = [
@@ -32,6 +54,10 @@ describe('force:limits:recordcounts:display', () => {
           {
             name: 'Contact',
             count: 116,
+          },
+          {
+            name: 'Lead',
+            count: 0,
           },
         ];
 

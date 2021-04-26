@@ -50,8 +50,15 @@ export class LimitsRecordCountsDisplayCommand extends SfdxCommand {
     try {
       const sobjecttypeString = (this.flags.sobjecttype as string[]).join();
       const conn = this.org.getConnection();
-      const geturl = `${conn.instanceUrl}/services/data/v${conn.version}/limits/recordCount?sObjects=${sobjecttypeString}`;
+      const geturl = `${conn.baseUrl()}/limits/recordCount?sObjects=${sobjecttypeString}`;
       const result = ((await conn.request(geturl)) as unknown) as Result;
+
+      // if an object is requested, but there's 0 of them on the server, append that object to the result
+      sobjecttypeString.split(',').forEach((name) => {
+        if (!result.sObjects.find((record) => record.name === name)) {
+          result.sObjects.push({ name, count: 0 });
+        }
+      });
 
       return result.sObjects;
     } catch (err) {
