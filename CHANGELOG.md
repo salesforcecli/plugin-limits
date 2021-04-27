@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/salesforcecli/plugin-limits/compare/v1.0.6...v1.1.0) (2021-04-26)
+
+
+### Features
+
+* add nut test ([#77](https://github.com/salesforcecli/plugin-limits/issues/77)) ([fa87c17](https://github.com/salesforcecli/plugin-limits/commit/fa87c172384d09e5a1c677743b20d9c2096fa445))
+
 ### [1.0.6](https://github.com/salesforcecli/plugin-limits/compare/v1.0.5...v1.0.6) (2021-04-13)
 
 
