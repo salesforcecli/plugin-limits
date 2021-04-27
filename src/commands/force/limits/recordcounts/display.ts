@@ -11,7 +11,7 @@ import { Messages, SfdxError } from '@salesforce/core';
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@salesforce/plugin-limits', 'recordcounts');
 
-interface RecordCount {
+export interface RecordCount {
   name: string;
   count: number;
 }
