@@ -99,5 +99,5 @@ EXAMPLES
   sfdx force:limits:api:display -u me@my.org
 ```
 
-_See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.0.5/src/commands/force/limits/api/display.ts)_
+_See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.0.6/src/commands/force/limits/api/display.ts)_
 <!-- commandsstop -->
