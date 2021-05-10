@@ -100,7 +100,7 @@ EXAMPLES
   sfdx force:limits:api:display -u me@my.org
 ```
 
-_See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.1.0/src/commands/force/limits/api/display.ts)_
+_See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.2.0/src/commands/force/limits/api/display.ts)_
 
 ## `sfdx force:limits:recordcounts:display -s <array> [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -138,5 +138,5 @@ EXAMPLES
   sfdx force:limits:recordcounts:display -s Account,Contact -u me@my.org
 ```
 
-_See code: [src/commands/force/limits/recordcounts/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.1.0/src/commands/force/limits/recordcounts/display.ts)_
+_See code: [src/commands/force/limits/recordcounts/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.2.0/src/commands/force/limits/recordcounts/display.ts)_
 <!-- commandsstop -->
