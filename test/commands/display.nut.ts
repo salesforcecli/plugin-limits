@@ -19,9 +19,9 @@ describe('Limits display', () => {
   let username: string;
   let testSession: TestSession;
 
-  before('prepare session and ensure environment variables', () => {
+  before('prepare session and ensure environment variables', async () => {
     username = ensureString(env.getString('TESTKIT_HUB_USERNAME'));
-    testSession = TestSession.create({});
+    testSession = await TestSession.create({});
   });
 
   after(async () => {
