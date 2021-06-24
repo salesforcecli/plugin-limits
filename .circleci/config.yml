@@ -69,6 +69,18 @@ workflows:
             branches:
               only: main
           context: CLI_CTC
+      - release-management/test-nut:
+          name: nuts-on-linux
+          sfdx_version: latest
+          os: linux
+          requires:
+            - release-management/test-package
+      - release-management/test-nut:
+          name: nuts-on-windows
+          sfdx_version: latest
+          os: windows
+          requires:
+            - release-management/test-package
   test-ts-update:
     triggers:
       - schedule:
@@ -79,16 +91,6 @@ workflows:
                 - main
     jobs:
       - release-management/test-ts-update
-  dependabot-automerge:
-    triggers:
-      - schedule:
-          cron: 0 9 * * *
-          filters:
-            branches:
-              only:
-                - main
-    jobs:
-      - release-management/dependabot-automerge
   just-nuts:
     when: << pipeline.parameters.run-just-nuts >>
     jobs:
@@ -103,3 +105,13 @@ workflows:
                 - linux
                 - windows
           npm_module_name: << pipeline.parameters.npm_module_name >>
+  dependabot-automerge:
+    triggers:
+      - schedule:
+          cron: '0 2,5,8,11 * * *'
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - release-management/dependabot-automerge
