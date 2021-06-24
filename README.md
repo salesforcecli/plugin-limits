@@ -69,6 +69,7 @@ sfdx plugins
 ## Commands
 <!-- commands -->
 * [`sfdx force:limits:api:display [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-forcelimitsapidisplay--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+* [`sfdx force:limits:recordcounts:display -s <array> [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-forcelimitsrecordcountsdisplay--s-array--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 
 ## `sfdx force:limits:api:display [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -99,5 +100,43 @@ EXAMPLES
   sfdx force:limits:api:display -u me@my.org
 ```
 
-_See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.0.5/src/commands/force/limits/api/display.ts)_
+_See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.2.0/src/commands/force/limits/api/display.ts)_
+
+## `sfdx force:limits:recordcounts:display -s <array> [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+display record counts for the specified standard and custom objects
+
+```
+USAGE
+  $ sfdx force:limits:recordcounts:display -s <array> [-u <string>] [--apiversion <string>] [--json] [--loglevel 
+  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+  -s, --sobjecttype=sobjecttype                                                     (required) comma-separated list of
+                                                                                    API names of standard or custom
+                                                                                    objects for which to display record
+                                                                                    counts
+
+  -u, --targetusername=targetusername                                               username or alias for the target
+                                                                                    org; overrides default target org
+
+  --apiversion=apiversion                                                           override the api version used for
+                                                                                    api requests made by this command
+
+  --json                                                                            format output as json
+
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+
+DESCRIPTION
+  Use this command to get an approximate count of the records in standard or custom objects in your org. These record 
+  counts are the same as the counts listed in the Storage Usage page in Setup. The record counts are approximate because 
+  they're calculated asynchronously and your org’s storage usage isn’t updated immediately.
+
+EXAMPLES
+  sfdx force:limits:recordcounts:display -s Account,Contact,Lead,Opportunity
+  sfdx force:limits:recordcounts:display -s Account,Contact -u me@my.org
+```
+
+_See code: [src/commands/force/limits/recordcounts/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v1.2.0/src/commands/force/limits/recordcounts/display.ts)_
 <!-- commandsstop -->

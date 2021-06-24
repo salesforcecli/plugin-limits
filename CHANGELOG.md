@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/salesforcecli/plugin-limits/compare/v1.2.0...v1.2.1) (2021-05-10)
+
+## [1.2.0](https://github.com/salesforcecli/plugin-limits/compare/v1.1.0...v1.2.0) (2021-04-29)
+
+
+### Features
+
+* add recordcounts command ([7628eaa](https://github.com/salesforcecli/plugin-limits/commit/7628eaab70a6b1fc9b015f22b4040de198d53745))
+
+
+### Bug Fixes
+
+* add 0 count response output ([14ede94](https://github.com/salesforcecli/plugin-limits/commit/14ede94c39dfc7cca008a22b2bd2fcecee3e0c5c))
+* arg in test ([b56ad46](https://github.com/salesforcecli/plugin-limits/commit/b56ad4687d59dc4272b4a6c770d4f81b059ace74))
+* update message ([3e5c28f](https://github.com/salesforcecli/plugin-limits/commit/3e5c28f118caceaff6acaace3e0ed5f94cf1bca9))
+
+## [1.1.0](https://github.com/salesforcecli/plugin-limits/compare/v1.0.6...v1.1.0) (2021-04-26)
+
+
+### Features
+
+* add nut test ([#77](https://github.com/salesforcecli/plugin-limits/issues/77)) ([fa87c17](https://github.com/salesforcecli/plugin-limits/commit/fa87c172384d09e5a1c677743b20d9c2096fa445))
+
 ### [1.0.6](https://github.com/salesforcecli/plugin-limits/compare/v1.0.5...v1.0.6) (2021-04-13)
 
 
