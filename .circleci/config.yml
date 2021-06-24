@@ -75,14 +75,12 @@ workflows:
           os: linux
           requires:
             - release-management/test-package
-          context: << pipeline.parameters.context_name >>
       - release-management/test-nut:
           name: nuts-on-windows
           sfdx_version: latest
           os: windows
           requires:
             - release-management/test-package
-          context: << pipeline.parameters.context_name >>
   test-ts-update:
     triggers:
       - schedule:
