@@ -33,7 +33,7 @@ export class LimitsApiDisplayCommand extends SfdxCommand {
     try {
       const conn = this.org.getConnection();
       const geturl = `${conn.instanceUrl}/services/data/v${conn.version}/limits`;
-      const result = (await conn.request(geturl)) as Result;
+      const result = await conn.request<Result>(geturl);
       const limits: ApiLimit[] = [];
 
       Object.keys(result).map((limitName) => {
