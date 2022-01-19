@@ -70,7 +70,6 @@ workflows:
               only: main
           context: CLI_CTC
       - release-management/test-nut:
-          name: nuts-on-linux
           sfdx_version: latest
           node_version: lts
           matrix:
