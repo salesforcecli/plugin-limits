@@ -9,7 +9,7 @@ import { $$, test, expect } from '@salesforce/command/lib/test';
 
 describe('force:limits:api:display', () => {
   async function prepareStubs() {
-    $$.SANDBOX.stub(Org.prototype, 'getConnection').returns(Connection.prototype);
+    $$.SANDBOX.stub(Org.prototype, 'getConnection').callsFake(() => Connection.prototype);
     $$.SANDBOX.stub(Connection.prototype, 'request').resolves({
       AnalyticsExternalDataSizeMB: {
         Max: 40960,

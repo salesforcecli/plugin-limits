@@ -26,8 +26,10 @@ export class LimitsRecordCountsDisplayCommand extends SfdxCommand {
   public static readonly requiresUsername = true;
   public static readonly result: SfdxResult = {
     tableColumnData: {
-      name: { header: 'sObject' },
-      count: { header: 'Record Count' },
+      columns: [
+        { key: 'name', label: 'sObject' },
+        { key: 'count', label: 'Record Count' },
+      ],
     },
     display() {
       if (Array.isArray(this.data) && this.data.length) {
@@ -49,7 +51,7 @@ export class LimitsRecordCountsDisplayCommand extends SfdxCommand {
       const sobjecttypeString = (this.flags.sobjecttype as string[]).join();
       const conn = this.org.getConnection();
       const geturl = `${conn.baseUrl()}/limits/recordCount?sObjects=${sobjecttypeString}`;
-      const result = await conn.request<Result>(geturl);
+      const result = (await conn.request(geturl)) as unknown as Result;
 
       // if an object is requested, but there's 0 of them on the server, append that object to the result
       sobjecttypeString.split(',').forEach((name) => {
