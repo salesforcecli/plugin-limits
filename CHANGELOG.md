@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/salesforcecli/plugin-limits/compare/v1.3.0...v2.0.0) (2022-04-01)
+
+### Features
+
+- display all record counts ([2e905ce](https://github.com/salesforcecli/plugin-limits/commit/2e905ceaef69865680b1cdfb5a9cd0468302f753))
+
+### Bug Fixes
+
+- parking orbit plugin-limits ([e870115](https://github.com/salesforcecli/plugin-limits/commit/e870115b61bb8d6201787bf2d74e2ae3de5b13e2))
+- parking orbit plugin-limits ([ce77180](https://github.com/salesforcecli/plugin-limits/commit/ce77180d05176f6f1016762a06356210d6bf46d3))
+
 ## [1.3.0](https://github.com/salesforcecli/plugin-limits/compare/v1.2.3...v1.3.0) (2021-12-02)
 
 ### Features
