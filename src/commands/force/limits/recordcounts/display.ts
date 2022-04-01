@@ -6,7 +6,7 @@
  */
 import * as os from 'os';
 import { flags, FlagsConfig, SfdxCommand, SfdxResult } from '@salesforce/command';
-import { Messages, SfdxError } from '@salesforce/core';
+import { Messages, SfError } from '@salesforce/core';
 
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@salesforce/plugin-limits', 'recordcounts');
@@ -39,28 +39,31 @@ export class LimitsRecordCountsDisplayCommand extends SfdxCommand {
   protected static readonly flagsConfig: FlagsConfig = {
     sobjecttype: flags.array({
       char: 's',
-      required: true,
       description: messages.getMessage('sobjecttypeFlagDescription'),
     }),
   };
 
   public async run(): Promise<RecordCount[]> {
     try {
-      const sobjecttypeString = (this.flags.sobjecttype as string[]).join();
+      const sobjectsPassed = this.flags.sobjecttype as string[];
+      const sobjectsQuery = sobjectsPassed ? `=${sobjectsPassed.join()}` : '';
+
       const conn = this.org.getConnection();
-      const geturl = `${conn.baseUrl()}/limits/recordCount?sObjects=${sobjecttypeString}`;
+      const geturl = `${conn.baseUrl()}/limits/recordCount?sObjects${sobjectsQuery}`;
       const result = await conn.request<Result>(geturl);
 
       // if an object is requested, but there's 0 of them on the server, append that object to the result
-      sobjecttypeString.split(',').forEach((name) => {
-        if (!result.sObjects.find((record) => record.name === name)) {
-          result.sObjects.push({ name, count: 0 });
-        }
-      });
+      if (sobjectsPassed) {
+        sobjectsPassed.forEach((name) => {
+          if (!result.sObjects.find((record) => record.name === name)) {
+            result.sObjects.push({ name, count: 0 });
+          }
+        });
+      }
 
       return result.sObjects;
     } catch (err) {
-      throw SfdxError.wrap(err);
+      throw SfError.wrap(err);
     }
   }
 }

@@ -1,6 +1,7 @@
 {
-  "commandDescription": "display record counts for the specified standard and custom objects\nUse this command to get an approximate count of the records in standard or custom objects in your org. These record counts are the same as the counts listed in the Storage Usage page in Setup. The record counts are approximate because they're calculated asynchronously and your org’s storage usage isn’t updated immediately.",
+  "commandDescription": "display record counts for the specified standard and custom objects\nUse this command to get an approximate count of the records in standard or custom objects in your org. These record counts are the same as the counts listed in the Storage Usage page in Setup. The record counts are approximate because they're calculated asynchronously and your org's storage usage isn't updated immediately. Executing without the '--sobjecttype' flag will display all available record counts.",
   "examples": [
+    "sfdx force:limits:recordcounts:display",
     "sfdx force:limits:recordcounts:display -s Account,Contact,Lead,Opportunity",
     "sfdx force:limits:recordcounts:display -s Account,Contact -u me@my.org"
   ],
