@@ -6,7 +6,7 @@
  */
 import * as os from 'os';
 import { SfdxCommand } from '@salesforce/command';
-import { Messages, SfdxError } from '@salesforce/core';
+import { Messages, SfError } from '@salesforce/core';
 
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@salesforce/plugin-limits', 'display');
@@ -44,17 +44,11 @@ export class LimitsApiDisplayCommand extends SfdxCommand {
         });
       });
 
-      this.ux.table(limits, {
-        columns: [
-          { key: 'name', label: 'Name' },
-          { key: 'remaining', label: 'Remaining' },
-          { key: 'max', label: 'Max' },
-        ],
-      });
+      this.ux.table(limits, { name: { header: 'Name' }, remaining: { header: 'Remaining' }, max: { header: 'Max' } });
 
       return limits;
     } catch (err) {
-      throw SfdxError.wrap(err);
+      throw SfError.wrap(err);
     }
   }
 }

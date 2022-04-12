@@ -38,6 +38,15 @@ describe('recordcounts:display', () => {
     expect(output.status).to.equal(0);
   });
 
+  it('Displays all records (json)', () => {
+    const output = execCmd<RecordCount[]>(`force:limits:recordcounts:display -u ${username} --json`, {
+      ensureExitCode: 0,
+    }).jsonOutput;
+
+    expect(output.result).length.greaterThan(10);
+    expect(output.status).to.equal(0);
+  });
+
   it('Displays the records (human readable)', () => {
     const command = `force:limits:recordcounts:display -s Account -u ${username}`;
     const result = execCmd(command, { ensureExitCode: 0 });
