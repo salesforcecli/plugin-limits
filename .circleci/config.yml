@@ -71,6 +71,7 @@ workflows:
           context:
             - CLI_CTC
             - AWS
+            - release
       - release-management/test-nut:
           sfdx_version: latest
           node_version: lts
@@ -81,6 +82,7 @@ workflows:
                 - windows
           requires:
             - release-management/test-package
+          context: na40-jwt
   test-ts-update:
     triggers:
       - schedule:
@@ -105,6 +107,7 @@ workflows:
                 - linux
                 - windows
           npm_module_name: << pipeline.parameters.npm_module_name >>
+          context: na40-auth-url
   dependabot-automerge:
     triggers:
       - schedule:
