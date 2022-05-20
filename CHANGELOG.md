@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/salesforcecli/plugin-limits/compare/v2.0.0...v2.0.1) (2022-05-20)
+
+### Bug Fixes
+
+- add prompt to examples ([e7c575f](https://github.com/salesforcecli/plugin-limits/commit/e7c575f6ba3504032a82ae60a978987522d7c10f))
+- add prompt to examples ([b58d728](https://github.com/salesforcecli/plugin-limits/commit/b58d72884976e734a22d4bf00f7f71438cbd9671))
+
 ## [2.0.0](https://github.com/salesforcecli/plugin-limits/compare/v1.3.0...v2.0.0) (2022-04-01)
 
 ### Features

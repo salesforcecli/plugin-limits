@@ -98,8 +98,8 @@ DESCRIPTION
   When you execute this command in a project, it provides limit information for your default scratch org.
 
 EXAMPLES
-  sfdx force:limits:api:display
-  sfdx force:limits:api:display -u me@my.org
+  $ sfdx force:limits:api:display
+  $ sfdx force:limits:api:display -u me@my.org
 ```
 
 _See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v2.0.0/src/commands/force/limits/api/display.ts)_
@@ -136,9 +136,9 @@ DESCRIPTION
   record counts, run the command without the '--sobjecttype' parameter.
 
 EXAMPLES
-  sfdx force:limits:recordcounts:display
-  sfdx force:limits:recordcounts:display -s Account,Contact,Lead,Opportunity
-  sfdx force:limits:recordcounts:display -s Account,Contact -u me@my.org
+  $ sfdx force:limits:recordcounts:display
+  $ sfdx force:limits:recordcounts:display -s Account,Contact,Lead,Opportunity
+  $ sfdx force:limits:recordcounts:display -s Account,Contact -u me@my.org
 ```
 
 _See code: [src/commands/force/limits/recordcounts/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v2.0.0/src/commands/force/limits/recordcounts/display.ts)_
