@@ -9,6 +9,7 @@ import { $$, test, expect } from '@salesforce/command/lib/test';
 
 describe('force:limits:recordcounts:display', () => {
   async function prepareStubs() {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     $$.SANDBOX.stub(Org.prototype, 'getConnection').returns(Connection.prototype);
     $$.SANDBOX.stub(Connection.prototype, 'request').resolves({
       sObjects: [
