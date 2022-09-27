@@ -6,8 +6,7 @@
  */
 import { expect } from 'chai';
 import { execCmd, TestSession } from '@salesforce/cli-plugins-testkit';
-import { Env } from '@salesforce/kit';
-import { ensureString, getString } from '@salesforce/ts-types';
+import { getString } from '@salesforce/ts-types';
 
 export interface ListApiDisplayOutput {
   status: number;
@@ -15,7 +14,6 @@ export interface ListApiDisplayOutput {
 }
 
 describe('Limits display', () => {
-  const env = new Env();
   let username: string;
   let testSession: TestSession;
 

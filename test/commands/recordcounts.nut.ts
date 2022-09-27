@@ -6,12 +6,10 @@
  */
 import { expect } from 'chai';
 import { execCmd, TestSession } from '@salesforce/cli-plugins-testkit';
-import { Env } from '@salesforce/kit';
-import { ensureString, getString } from '@salesforce/ts-types';
+import { getString } from '@salesforce/ts-types';
 import { RecordCount } from '../../src/commands/force/limits/recordcounts/display';
 
 describe('recordcounts:display', () => {
-  const env = new Env();
   let username: string;
   let testSession: TestSession;
 
