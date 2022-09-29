@@ -63,7 +63,10 @@ export class LimitsRecordCountsDisplayCommand extends SfdxCommand {
 
       return result.sObjects;
     } catch (err) {
-      throw SfError.wrap(err);
+      if (err instanceof Error || typeof err === 'string') {
+        throw SfError.wrap(err);
+      }
+      throw err;
     }
   }
 }

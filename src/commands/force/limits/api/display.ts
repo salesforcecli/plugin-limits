@@ -48,7 +48,10 @@ export class LimitsApiDisplayCommand extends SfdxCommand {
 
       return limits;
     } catch (err) {
-      throw SfError.wrap(err);
+      if (err instanceof Error || typeof err === 'string') {
+        throw SfError.wrap(err);
+      }
+      throw err;
     }
   }
 }
