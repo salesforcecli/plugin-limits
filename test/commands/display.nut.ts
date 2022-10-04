@@ -21,7 +21,9 @@ describe('Limits display', () => {
 
   before('prepare session and ensure environment variables', async () => {
     username = ensureString(env.getString('TESTKIT_HUB_USERNAME'));
-    testSession = await TestSession.create({});
+    testSession = await TestSession.create({
+      devhubAuthStrategy: 'AUTO'
+    });
   });
 
   after(async () => {
