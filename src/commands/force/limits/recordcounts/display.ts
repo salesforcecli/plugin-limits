@@ -16,6 +16,8 @@ export interface RecordCount {
   count: number;
 }
 
+export type RecordCounts = RecordCount[];
+
 interface Result {
   sObjects: RecordCount[];
 }
@@ -43,7 +45,7 @@ export class LimitsRecordCountsDisplayCommand extends SfdxCommand {
     }),
   };
 
-  public async run(): Promise<RecordCount[]> {
+  public async run(): Promise<RecordCounts> {
     try {
       const sobjectsPassed = this.flags.sobjecttype as string[];
       const sobjectsQuery = sobjectsPassed ? `=${sobjectsPassed.join()}` : '';

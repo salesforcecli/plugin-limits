@@ -11,11 +11,13 @@ import { Messages, SfError } from '@salesforce/core';
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@salesforce/plugin-limits', 'display');
 
-type ApiLimit = {
+export type ApiLimit = {
   name: string;
   max: number;
   remaining: number;
 };
+
+export type ApiLimits = ApiLimit[];
 
 interface Result {
   [key: string]: {
@@ -29,7 +31,7 @@ export class LimitsApiDisplayCommand extends SfdxCommand {
   public static readonly examples = messages.getMessage('examples').split(os.EOL);
   public static readonly requiresUsername = true;
 
-  public async run(): Promise<ApiLimit[]> {
+  public async run(): Promise<ApiLimits> {
     try {
       const conn = this.org.getConnection();
       const geturl = `${conn.instanceUrl}/services/data/v${conn.version}/limits`;
