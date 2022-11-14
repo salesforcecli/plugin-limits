@@ -8,7 +8,7 @@ display record counts for the specified standard and custom objects\nUse this co
 - sfdx force:limits:recordcounts:display -s Account,Contact,Lead,Opportunity
 - sfdx force:limits:recordcounts:display -s Account,Contact -u me@my.org
 
-# sobjecttypeFlagDescription
+# sobjectFlagDescription
 
 comma-separated list of API names of standard or custom objects for which to display record counts
 

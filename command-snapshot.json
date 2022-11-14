@@ -8,7 +8,7 @@
   {
     "command": "force:limits:recordcounts:display",
     "plugin": "@salesforce/plugin-limits",
-    "flags": ["json", "sobject-type", "target-org"],
+    "flags": ["json", "sobject", "target-org"],
     "alias": ["force:limits:recordcounts:display", "show:recordcounts"]
   },
   {
@@ -20,7 +20,7 @@
   {
     "command": "limits:recordcounts:display",
     "plugin": "@salesforce/plugin-limits",
-    "flags": ["json", "sobject-type", "target-org"],
+    "flags": ["json", "sobject", "target-org"],
     "alias": ["force:limits:recordcounts:display", "show:recordcounts"]
   },
   {
@@ -32,7 +32,7 @@
   {
     "command": "show:recordcounts",
     "plugin": "@salesforce/plugin-limits",
-    "flags": ["json", "sobject-type", "target-org"],
+    "flags": ["json", "sobject", "target-org"],
     "alias": ["force:limits:recordcounts:display", "show:recordcounts"]
   }
 ]

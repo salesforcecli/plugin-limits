@@ -29,9 +29,9 @@ export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
   public static readonly examples = messages.getMessage('examples').split(os.EOL);
 
   public static flags = {
-    'sobject-type': Flags.string({
+    sobject: Flags.string({
       char: 's',
-      summary: messages.getMessage('sobjecttypeFlagDescription'),
+      summary: messages.getMessage('sobjectFlagDescription'),
       aliases: ['sobjecttype'],
       multiple: true,
       default: [],
@@ -47,7 +47,7 @@ export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
     try {
       const { flags } = await this.parse(LimitsRecordCountsDisplayCommand);
       const conn = flags['target-org'].getConnection();
-      const sobjectsPassed = flags['sobject-type'].map((sobject) => sobject.split(',')).flat();
+      const sobjectsPassed = flags['sobject'].map((sobject) => sobject.split(',')).flat();
       const sobjectsQuery = sobjectsPassed.length > 0 ? `=${sobjectsPassed.join()}` : '';
       const geturl = `${conn.baseUrl()}/limits/recordCount?sObjects${sobjectsQuery}`;
       const result = await conn.request<Result>(geturl);
