@@ -4,9 +4,9 @@ display record counts for the specified standard and custom objects\nUse this co
 
 # examples
 
-- sfdx force:limits:recordcounts:display
-- sfdx force:limits:recordcounts:display -s Account,Contact,Lead,Opportunity
-- sfdx force:limits:recordcounts:display -s Account,Contact -u me@my.org
+- <%= config.bin %> <%= command.id %>
+- <%= config.bin %> <%= command.id %> --sobject Account --sobject Contact,Lead,Opportunity
+- <%= config.bin %> <%= command.id %> --sobject Account,Contact --target-org me@my.org
 
 # sobjectFlagDescription
 

@@ -5,8 +5,8 @@ When you execute this command in a project, it provides limit information for yo
 
 # examples
 
-- sfdx force:limits:api:display
-- sfdx force:limits:api:display -u me@my.org
+- <%= config.bin %> <%= command.id %>
+- <%= config.bin %> <%= command.id %> --target-org me@my.org
 
 # targetOrg
 
