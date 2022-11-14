@@ -1,0 +1,13 @@
+# description
+
+display current org’s limits
+When you execute this command in a project, it provides limit information for your default scratch org.",
+
+# examples
+
+$ sfdx force:limits:api:display
+$ sfdx force:limits:api:display -u me@my.org"
+
+# targetOrg
+
+Login username or alias for the target org.
