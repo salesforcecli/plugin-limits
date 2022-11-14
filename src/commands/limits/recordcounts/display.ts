@@ -47,7 +47,7 @@ export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
     try {
       const { flags } = await this.parse(LimitsRecordCountsDisplayCommand);
       const conn = flags['target-org'].getConnection();
-      const sobjectsPassed = flags['sobject'].map((sobject) => sobject.split(',')).flat();
+      const sobjectsPassed = flags.sobject.map((sobject) => sobject.split(',')).flat();
       const sobjectsQuery = sobjectsPassed.length > 0 ? `=${sobjectsPassed.join()}` : '';
       const geturl = `${conn.baseUrl()}/limits/recordCount?sObjects${sobjectsQuery}`;
       const result = await conn.request<Result>(geturl);
