@@ -27,7 +27,7 @@ interface Result {
 export type ApiLimits = ApiLimit[];
 
 export class LimitsApiDisplayCommand extends SfCommand<ApiLimits> {
-  public static aliases = ['force:limits:api:display', 'show:api:limits'];
+  public static aliases = ['force:limits:api:display', 'org:list:api-limits'];
   public static readonly summary = messages.getMessage('description');
   public static readonly description = messages.getMessage('description');
   public static readonly examples = messages.getMessage('examples').split(os.EOL);
