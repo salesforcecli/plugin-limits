@@ -5,13 +5,9 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 import { Connection, Org } from '@salesforce/core';
-import { TestContext } from '@salesforce/core/lib/testSetup';
-import { test } from '@oclif/test';
-import { expect } from 'chai';
+import { $$, test, expect } from '@salesforce/command/lib/test';
 
 describe('force:limits:recordcounts:display', () => {
-  const $$ = new TestContext();
-
   async function prepareStubs() {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     $$.SANDBOX.stub(Org.prototype, 'getConnection').returns(Connection.prototype);
