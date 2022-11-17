@@ -2,13 +2,37 @@
   {
     "command": "force:limits:api:display",
     "plugin": "@salesforce/plugin-limits",
-    "flags": ["apiversion", "json", "loglevel", "targetusername"],
-    "alias": []
+    "flags": ["json", "target-org"],
+    "alias": ["force:limits:api:display", "org:list:api-limits"]
   },
   {
     "command": "force:limits:recordcounts:display",
     "plugin": "@salesforce/plugin-limits",
-    "flags": ["apiversion", "json", "loglevel", "sobjecttype", "targetusername"],
-    "alias": []
+    "flags": ["json", "sobject", "target-org"],
+    "alias": ["force:limits:recordcounts:display", "org:list:sobject:record-counts"]
+  },
+  {
+    "command": "limits:api:display",
+    "plugin": "@salesforce/plugin-limits",
+    "flags": ["json", "target-org"],
+    "alias": ["force:limits:api:display", "org:list:api-limits"]
+  },
+  {
+    "command": "limits:recordcounts:display",
+    "plugin": "@salesforce/plugin-limits",
+    "flags": ["json", "sobject", "target-org"],
+    "alias": ["force:limits:recordcounts:display", "org:list:sobject:record-counts"]
+  },
+  {
+    "command": "org:list:api-limits",
+    "plugin": "@salesforce/plugin-limits",
+    "flags": ["json", "target-org"],
+    "alias": ["force:limits:api:display", "org:list:api-limits"]
+  },
+  {
+    "command": "org:list:sobject:record-counts",
+    "plugin": "@salesforce/plugin-limits",
+    "flags": ["json", "sobject", "target-org"],
+    "alias": ["force:limits:recordcounts:display", "org:list:sobject:record-counts"]
   }
 ]
