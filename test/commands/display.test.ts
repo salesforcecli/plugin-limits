@@ -5,16 +5,9 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 import { Connection, Org } from '@salesforce/core';
-import { TestContext } from '@salesforce/core/lib/testSetup';
-import { test } from '@oclif/test';
-import { expect } from 'chai';
-
-import { parseJson } from '@salesforce/kit';
-import { ApiLimits } from '../../src/commands/limits/api/display';
+import { $$, test, expect } from '@salesforce/command/lib/test';
 
 describe('force:limits:api:display', () => {
-  const $$ = new TestContext();
-
   async function prepareStubs() {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     $$.SANDBOX.stub(Org.prototype, 'getConnection').returns(Connection.prototype);
@@ -59,7 +52,8 @@ describe('force:limits:api:display', () => {
           },
         ];
 
-        const result = parseJson(ctx.stdout) as ApiLimits;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+        const result = JSON.parse(ctx.stdout).result;
         expect(result).to.deep.equal(expected);
       });
   });
