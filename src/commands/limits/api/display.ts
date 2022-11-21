@@ -6,7 +6,7 @@
  */
 import * as os from 'os';
 import { Messages, SfError } from '@salesforce/core';
-import { Flags, SfCommand } from '@salesforce/sf-plugins-core';
+import { Flags, SfCommand, orgApiVersionFlagWithDeprecations, loglevel } from '@salesforce/sf-plugins-core';
 
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@salesforce/plugin-limits', 'display');
@@ -27,7 +27,7 @@ interface Result {
 export type ApiLimits = ApiLimit[];
 
 export class LimitsApiDisplayCommand extends SfCommand<ApiLimits> {
-  public static aliases = ['force:limits:api:display', 'org:list:api-limits'];
+  public static aliases = ['force:limits:api:display', 'org:list:limits'];
   public static readonly summary = messages.getMessage('description');
   public static readonly description = messages.getMessage('description');
   public static readonly examples = messages.getMessage('examples').split(os.EOL);
@@ -37,13 +37,15 @@ export class LimitsApiDisplayCommand extends SfCommand<ApiLimits> {
       aliases: ['targetusername', 'u'],
       summary: messages.getMessage('targetOrg'),
     }),
+    'api-version': orgApiVersionFlagWithDeprecations,
+    loglevel,
   };
 
   public async run(): Promise<ApiLimits> {
     try {
       const { flags } = await this.parse(LimitsApiDisplayCommand);
-      const conn = flags['target-org'].getConnection();
-      const getUrl = `${conn.instanceUrl}/services/data/v${conn.version}/limits`;
+      const conn = flags['target-org'].getConnection(flags['api-version']);
+      const getUrl = '/limits';
       const result = await conn.request<Result>(getUrl);
       const limits: ApiLimits = Object.entries(result).map(([name, { Max, Remaining }]) => ({
         name,

@@ -6,9 +6,9 @@
   "bugs": "https://github.com/forcedotcom/cli/issues",
   "main": "lib/index.js",
   "dependencies": {
-    "@salesforce/core": "^3.31.18",
+    "@salesforce/core": "^3.32.1",
     "@salesforce/kit": "^1.8.0",
-    "@salesforce/sf-plugins-core": "^1.17.4",
+    "@salesforce/sf-plugins-core": "^1.18.1",
     "@salesforce/ts-types": "^1.7.1",
     "tslib": "^2"
   },

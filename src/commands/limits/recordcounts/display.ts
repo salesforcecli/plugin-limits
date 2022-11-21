@@ -6,7 +6,7 @@
  */
 import * as os from 'os';
 import { Messages, SfError } from '@salesforce/core';
-import { Flags, SfCommand } from '@salesforce/sf-plugins-core';
+import { Flags, loglevel, orgApiVersionFlagWithDeprecations, SfCommand } from '@salesforce/sf-plugins-core';
 
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@salesforce/plugin-limits', 'recordcounts');
@@ -41,15 +41,17 @@ export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
       aliases: ['targetusername', 'u'],
       summary: messages.getMessage('targetOrg'),
     }),
+    'api-version': orgApiVersionFlagWithDeprecations,
+    loglevel,
   };
 
   public async run(): Promise<RecordCounts> {
     try {
       const { flags } = await this.parse(LimitsRecordCountsDisplayCommand);
-      const conn = flags['target-org'].getConnection();
+      const conn = flags['target-org'].getConnection(flags['api-version']);
       const sobjectsPassed = flags.sobject.map((sobject) => sobject.split(',')).flat();
       const sobjectsQuery = sobjectsPassed.length > 0 ? `=${sobjectsPassed.join()}` : '';
-      const geturl = `${conn.baseUrl()}/limits/recordCount?sObjects${sobjectsQuery}`;
+      const geturl = `/limits/recordCount?sObjects${sobjectsQuery}`;
       const result = await conn.request<Result>(geturl);
 
       const recordCounts = result.sObjects
