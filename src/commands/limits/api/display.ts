@@ -4,7 +4,6 @@
  * Licensed under the BSD 3-Clause license.
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
-import * as os from 'os';
 import { Messages, SfError } from '@salesforce/core';
 import { Flags, SfCommand, orgApiVersionFlagWithDeprecations, loglevel } from '@salesforce/sf-plugins-core';
 
@@ -30,13 +29,9 @@ export class LimitsApiDisplayCommand extends SfCommand<ApiLimits> {
   public static aliases = ['force:limits:api:display', 'org:list:limits'];
   public static readonly summary = messages.getMessage('description');
   public static readonly description = messages.getMessage('description');
-  public static readonly examples = messages.getMessage('examples').split(os.EOL);
+  public static readonly examples = messages.getMessages('examples');
   public static flags = {
-    'target-org': Flags.requiredOrg({
-      char: 'o',
-      aliases: ['targetusername', 'u'],
-      summary: messages.getMessage('targetOrg'),
-    }),
+    'target-org': Flags.requiredOrg(),
     'api-version': orgApiVersionFlagWithDeprecations,
     loglevel,
   };
