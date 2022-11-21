@@ -45,8 +45,7 @@ export class LimitsApiDisplayCommand extends SfCommand<ApiLimits> {
     try {
       const { flags } = await this.parse(LimitsApiDisplayCommand);
       const conn = flags['target-org'].getConnection(flags['api-version']);
-      const getUrl = '/limits';
-      const result = await conn.request<Result>(getUrl);
+      const result = await conn.request<Result>('/limits');
       const limits: ApiLimits = Object.entries(result).map(([name, { Max, Remaining }]) => ({
         name,
         max: Max,
