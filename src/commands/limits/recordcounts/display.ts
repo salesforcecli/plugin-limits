@@ -29,7 +29,7 @@ interface Result {
 
 export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
   public static readonly aliases = ['force:limits:recordcounts:display', 'org:list:sobject:record-counts'];
-  public static readonly summary = messages.getMessage('description');
+  public static readonly summary = messages.getMessage('summary');
   public static readonly description = messages.getMessage('description');
   public static readonly examples = messages.getMessages('examples');
 
