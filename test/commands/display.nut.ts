@@ -34,8 +34,8 @@ describe('Limits display', () => {
     const output = execCmd<ListApiDisplayOutput>(`limits:api:display -u ${username} --json`, {
       ensureExitCode: 0,
     }).jsonOutput;
-    expect(output.result).length.greaterThan(0);
-    expect(output.status).to.equal(0);
+    expect(output?.result).length.greaterThan(0);
+    expect(output?.status).to.equal(0);
   });
 
   it('Displays the limits (human readable)', () => {
