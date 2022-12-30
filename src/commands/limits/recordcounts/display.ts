@@ -33,7 +33,7 @@ export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
   public static readonly description = messages.getMessage('description');
   public static readonly examples = messages.getMessages('examples');
 
-  public static flags = {
+  public static readonly flags = {
     sobject: Flags.string({
       char: 's',
       summary: messages.getMessage('sobjectFlagDescription'),
