@@ -30,11 +30,11 @@ describe('recordcounts:display', () => {
     const output = execCmd<RecordCount[]>(`limits:recordcounts:display -s Account,Contact -u ${username} --json`, {
       ensureExitCode: 0,
     }).jsonOutput;
-    expect(output.result).length.greaterThan(0);
+    expect(output?.result).length.greaterThan(0);
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    expect(output.result[0].name).equals('Account');
-    expect(output.result.length).equals(2);
-    expect(output.status).to.equal(0);
+    expect(output?.result[0].name).equals('Account');
+    expect(output?.result.length).equals(2);
+    expect(output?.status).to.equal(0);
   });
 
   it('Displays all records (json)', () => {
@@ -42,8 +42,8 @@ describe('recordcounts:display', () => {
       ensureExitCode: 0,
     }).jsonOutput;
 
-    expect(output.result).length.greaterThan(10);
-    expect(output.status).to.equal(0);
+    expect(output?.result).length.greaterThan(10);
+    expect(output?.status).to.equal(0);
   });
 
   it('Displays the records (human readable)', () => {
