@@ -35,7 +35,7 @@ export class LimitsApiDisplayCommand extends SfCommand<ApiLimits> {
   public static readonly summary = messages.getMessage('summary');
   public static readonly description = messages.getMessage('description');
   public static readonly examples = messages.getMessages('examples');
-  public static flags = {
+  public static readonly flags = {
     'target-org': requiredOrgFlagWithDeprecations,
     'api-version': orgApiVersionFlagWithDeprecations,
     loglevel,

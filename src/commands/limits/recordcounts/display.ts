@@ -6,7 +6,7 @@
  */
 import { Messages, SfError } from '@salesforce/core';
 import {
-  Flags,
+  arrayWithDeprecation,
   loglevel,
   orgApiVersionFlagWithDeprecations,
   requiredOrgFlagWithDeprecations,
@@ -33,12 +33,11 @@ export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
   public static readonly description = messages.getMessage('description');
   public static readonly examples = messages.getMessages('examples');
 
-  public static flags = {
-    sobject: Flags.string({
+  public static readonly flags = {
+    sobject: arrayWithDeprecation({
       char: 's',
       summary: messages.getMessage('sobjectFlagDescription'),
       aliases: ['sobjecttype'],
-      multiple: true,
       default: [],
     }),
     'target-org': requiredOrgFlagWithDeprecations,
@@ -50,13 +49,12 @@ export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
     try {
       const { flags } = await this.parse(LimitsRecordCountsDisplayCommand);
       const conn = flags['target-org'].getConnection(flags['api-version']);
-      const sobjectsPassed = flags.sobject.map((sobject) => sobject.split(',')).flat();
-      const sobjectsQuery = sobjectsPassed.length > 0 ? `=${sobjectsPassed.join()}` : '';
+      const sobjectsQuery = flags.sobject.length > 0 ? `=${flags.sobject.join()}` : '';
       const geturl = `/limits/recordCount?sObjects${sobjectsQuery}`;
       const result = await conn.request<Result>(geturl);
 
       const recordCounts = result.sObjects
-        .filter((record) => (sobjectsPassed.length > 0 ? sobjectsPassed.includes(record.name) : result.sObjects))
+        .filter((record) => (flags.sobject.length > 0 ? flags.sobject.includes(record.name) : result.sObjects))
         .sort((a, b) => a.name.localeCompare(b.name));
 
       this.table(recordCounts, {
