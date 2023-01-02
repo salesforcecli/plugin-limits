@@ -1,3 +1,9 @@
+## [2.1.7](https://github.com/salesforcecli/plugin-limits/compare/2.1.6...2.1.7) (2023-01-01)
+
+### Bug Fixes
+
+- **deps:** bump @salesforce/command from 5.2.35 to 5.2.37 ([231b9bc](https://github.com/salesforcecli/plugin-limits/commit/231b9bcb19d909382f11ad9b00e41723575f0640))
+
 ## [2.1.6](https://github.com/salesforcecli/plugin-limits/compare/2.1.5...2.1.6) (2022-12-25)
 
 ### Bug Fixes
