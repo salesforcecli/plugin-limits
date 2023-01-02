@@ -22,7 +22,7 @@ describe('Limits display', () => {
   before('prepare session and ensure environment variables', async () => {
     username = ensureString(env.getString('TESTKIT_HUB_USERNAME'));
     testSession = await TestSession.create({
-      devhubAuthStrategy: 'AUTO'
+      devhubAuthStrategy: 'AUTO',
     });
   });
 
@@ -31,15 +31,15 @@ describe('Limits display', () => {
   });
 
   it('Displays the limits (json)', () => {
-    const output = execCmd<ListApiDisplayOutput>(`force:limits:api:display -u ${username} --json`, {
+    const output = execCmd<ListApiDisplayOutput>(`limits:api:display -u ${username} --json`, {
       ensureExitCode: 0,
     }).jsonOutput;
-    expect(output.result).length.greaterThan(0);
-    expect(output.status).to.equal(0);
+    expect(output?.result).length.greaterThan(0);
+    expect(output?.status).to.equal(0);
   });
 
   it('Displays the limits (human readable)', () => {
-    const command = `force:limits:api:display -u ${username}`;
+    const command = `limits:api:display -u ${username}`;
     const result = execCmd(command, { ensureExitCode: 0 });
     const output = getString(result, 'shellOutput.stdout');
     expect(output).to.include('ActiveScratchOrgs');
