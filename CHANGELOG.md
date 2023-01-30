@@ -1,3 +1,12 @@
+# [2.3.0](https://github.com/salesforcecli/plugin-limits/compare/2.2.4...2.3.0) (2023-01-30)
+
+
+### Features
+
+* use sf-plugins-core v2 and core v2 ([#439](https://github.com/salesforcecli/plugin-limits/issues/439)) ([ee09feb](https://github.com/salesforcecli/plugin-limits/commit/ee09feb5966a8af24c175fe3e2fa667e910ea576))
+
+
+
 ## [2.2.4](https://github.com/salesforcecli/plugin-limits/compare/2.2.3...2.2.4) (2023-01-29)
 
 
