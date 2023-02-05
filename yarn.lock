@@ -3293,11 +3293,12 @@ eslint-plugin-prefer-arrow@^1.2.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-prefer-arrow/-/eslint-plugin-prefer-arrow-1.2.3.tgz#e7fbb3fa4cd84ff1015b9c51ad86550e55041041"
   integrity sha512-J9I5PKCOJretVuiZRGvPQxCbllxGAV/viI20JO3LYblAodofBxyMnZAJ+WGeClHgANnSJberTNoFWWjrWKBuXQ==
 
-eslint-plugin-sf-plugin@^1.6.3:
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-sf-plugin/-/eslint-plugin-sf-plugin-1.6.3.tgz#ed0a3da86901abbca13d8674ddea9669d388d409"
-  integrity sha512-ExtwCAl97Jy6XZ+z4gL9NQUmFQffXPNBQmdapBotrhZ0YpOi2E8Kek+aFPhOPO8gd1GnTYJd/AspxVnqeV+fuw==
+eslint-plugin-sf-plugin@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-sf-plugin/-/eslint-plugin-sf-plugin-1.8.0.tgz#320fd3ad3592aa9eb0189bd3da0a92b67c696ca5"
+  integrity sha512-M9mhQaJc08a0YUgBDyCvoA8m63HmCfl9Y7BFRhvztjQErV+dxLWgCFd+j1vHzvDc0CZsEdqB2uBiLlZ0p7SNYQ==
   dependencies:
+    "@salesforce/core" "^3.33.1"
     "@typescript-eslint/utils" "^5.48.1"
 
 eslint-scope@^5.1.1:
