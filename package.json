@@ -79,13 +79,13 @@
     ],
     "topics": {
       "limits": {
-        "description": "display current org’s limits",
+        "description": "Display an org’s limits.",
         "subtopics": {
           "api": {
-            "description": "display current org’s api limits"
+            "description": "Display an org’s API limits."
           },
           "recordcounts": {
-            "description": "display record counts for the current"
+            "description": "Display record counts for an org."
           }
         }
       }
