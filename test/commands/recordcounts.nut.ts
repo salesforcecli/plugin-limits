@@ -27,7 +27,10 @@ describe('recordcounts:display', () => {
   });
 
   it('Displays the records (json)', () => {
-    const output = execCmd<RecordCount[]>(`limits:recordcounts:display -s Account,Contact -u ${username} --json`, {
+    const config = execCmd<RecordCount[]>('config:list', { cli: 'sf', ensureExitCode: 0 });
+    // eslint-disable-next-line no-console
+    console.log(config);
+    const output = execCmd<RecordCount[]>(`limits:recordcounts:display -s Account,Contact -o ${username} --json`, {
       ensureExitCode: 0,
     }).jsonOutput;
     expect(output?.result).length.greaterThan(0);
