@@ -1,3 +1,12 @@
+## [2.3.14](https://github.com/salesforcecli/plugin-limits/compare/2.3.13...2.3.14) (2023-05-08)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 2.8.2 to 2.8.5 ([f7af057](https://github.com/salesforcecli/plugin-limits/commit/f7af0578baf71ff3290a679dc5d25c1131ab3340))
+
+
+
 ## [2.3.13](https://github.com/salesforcecli/plugin-limits/compare/2.3.12...2.3.13) (2023-04-16)
 
 
