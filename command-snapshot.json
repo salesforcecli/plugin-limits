@@ -3,12 +3,16 @@
     "command": "limits:api:display",
     "plugin": "@salesforce/plugin-limits",
     "flags": ["api-version", "json", "loglevel", "target-org"],
-    "alias": ["force:limits:api:display", "org:list:limits"]
+    "alias": ["force:limits:api:display", "org:list:limits"],
+    "flagChars": ["o"],
+    "flagAliases": ["apiversion", "targetusername", "u"]
   },
   {
     "command": "limits:recordcounts:display",
     "plugin": "@salesforce/plugin-limits",
     "flags": ["api-version", "json", "loglevel", "sobject", "target-org"],
-    "alias": ["force:limits:recordcounts:display", "org:list:sobject:record-counts"]
+    "alias": ["force:limits:recordcounts:display", "org:list:sobject:record-counts"],
+    "flagChars": ["o", "s"],
+    "flagAliases": ["apiversion", "sobjecttype", "targetusername", "u"]
   }
 ]
