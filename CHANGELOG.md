@@ -1,3 +1,12 @@
+## [2.3.21](https://github.com/salesforcecli/plugin-limits/compare/2.3.20...2.3.21) (2023-06-18)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/core from 4.2.1 to 4.3.1 ([b58d73b](https://github.com/salesforcecli/plugin-limits/commit/b58d73be65b572c3577faac05d267b5933c8de68))
+
+
+
 ## [2.3.20](https://github.com/salesforcecli/plugin-limits/compare/2.3.19...2.3.20) (2023-06-11)
 
 
