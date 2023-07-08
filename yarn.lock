@@ -947,10 +947,10 @@
     strip-ansi "6.0.1"
     ts-retry-promise "^0.7.0"
 
-"@salesforce/core@^4.0.1", "@salesforce/core@^4.1.0", "@salesforce/core@^4.1.3", "@salesforce/core@^4.3.1":
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-4.3.2.tgz#01cab40d349bb0b48044942266a7996f3d1e2b9b"
-  integrity sha512-dsgUYI9pBpJx0l01fumyx85jOPBl5q3J1yTff5ktzlWAs3LXdjqa5KTQMTtS5b36nd4Ht3CVSd36iEOZodoB0g==
+"@salesforce/core@^4.1.0", "@salesforce/core@^4.1.3", "@salesforce/core@^4.3.1", "@salesforce/core@^4.3.2":
+  version "4.3.7"
+  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-4.3.7.tgz#4e03bb45aff19590a582f402b404a6a75919b8ae"
+  integrity sha512-7bCCAcYTZbpRZlUvJui74K6TDrzaY5ZGrjCxXft7GId9wqOKQSLxDJiUV1S9GWTIeiE3cdBVX2n5R5YdSQtbtw==
   dependencies:
     "@salesforce/bunyan" "^2.0.0"
     "@salesforce/kit" "^3.0.3"
@@ -963,7 +963,7 @@
     faye "^1.4.0"
     form-data "^4.0.0"
     js2xmlparser "^4.0.1"
-    jsforce "^2.0.0-beta.24"
+    jsforce "^2.0.0-beta.27"
     jsonwebtoken "9.0.0"
     jszip "3.10.1"
     proper-lockfile "^4.1.2"
@@ -1021,13 +1021,13 @@
     "@salesforce/ts-types" "^2.0.1"
     tslib "^2.5.2"
 
-"@salesforce/plugin-command-reference@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@salesforce/plugin-command-reference/-/plugin-command-reference-3.0.8.tgz#6424bc1dfd39b4596d6902411fcba6e33580025c"
-  integrity sha512-6lKYafuAKx4fWmNXJhB5r0V6ZnnPKvv6j1QDTFj5pWf3rYK684EPQAVMMX1G5B5kSF6Y4SH8Y9i/lyQWsNBZWA==
+"@salesforce/plugin-command-reference@^3.0.10":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@salesforce/plugin-command-reference/-/plugin-command-reference-3.0.10.tgz#f832bfe3270588376b7ba21d204cd181af534f00"
+  integrity sha512-lSR5luSoU9yt76jw9pFya7U6KNfIG4FQaIdmqSzj0kjCAWVSu/50TcR6WqhMdUorWgcXowobXlLkyGf5uIsrbQ==
   dependencies:
     "@oclif/core" "^2.8.7"
-    "@salesforce/core" "^4.0.1"
+    "@salesforce/core" "^4.3.2"
     "@salesforce/kit" "^3.0.3"
     "@salesforce/sf-plugins-core" "^3.0.4"
     "@salesforce/ts-types" "^2.0.3"
@@ -4328,10 +4328,10 @@ jsesc@^2.5.1:
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-2.5.2.tgz#80564d2e483dacf6e8ef209650a67df3f0c283a4"
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
 
-jsforce@^2.0.0-beta.24:
-  version "2.0.0-beta.24"
-  resolved "https://registry.yarnpkg.com/jsforce/-/jsforce-2.0.0-beta.24.tgz#fe054eb0f6f668eff10566e086892dd2387364f7"
-  integrity sha512-rbDC9Y054Ele3qlDyFZxFY6RRyqpH7DKPYhAwBM2TIzqOl9OG35EB4lnJLaIuv/MZVA2mvTIV/TwxVv8PiB1EA==
+jsforce@^2.0.0-beta.27:
+  version "2.0.0-beta.27"
+  resolved "https://registry.yarnpkg.com/jsforce/-/jsforce-2.0.0-beta.27.tgz#ba822b18b77bea4529491060a9b07bc1009735ac"
+  integrity sha512-d9dDWWeHwayRKPo8FJBAIUyk8sNXGSHwdUjR6al3yK0YKci27Jc1XfNaQTxEAuymHQJVaCb1gxTKqmA4uznFdQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@babel/runtime-corejs3" "^7.12.5"
