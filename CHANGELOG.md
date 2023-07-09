@@ -1,3 +1,12 @@
+## [2.3.25](https://github.com/salesforcecli/plugin-limits/compare/2.3.24...2.3.25) (2023-07-09)
+
+
+### Bug Fixes
+
+* **deps:** bump tough-cookie from 4.1.2 to 4.1.3 ([2ac7ebf](https://github.com/salesforcecli/plugin-limits/commit/2ac7ebf8c76217f65c87c5f67af05b25d2ea7212))
+
+
+
 ## [2.3.24](https://github.com/salesforcecli/plugin-limits/compare/2.3.23...2.3.24) (2023-07-09)
 
 
