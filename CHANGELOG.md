@@ -1,3 +1,12 @@
+## [2.3.26](https://github.com/salesforcecli/plugin-limits/compare/2.3.25...2.3.26) (2023-07-11)
+
+
+### Bug Fixes
+
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([29b8dda](https://github.com/salesforcecli/plugin-limits/commit/29b8dda018e24c1f6cd06c35b94f837d3e846f16))
+
+
+
 ## [2.3.25](https://github.com/salesforcecli/plugin-limits/compare/2.3.24...2.3.25) (2023-07-09)
 
 
