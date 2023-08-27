@@ -1,3 +1,12 @@
+## [2.3.32](https://github.com/salesforcecli/plugin-limits/compare/2.3.31...2.3.32) (2023-08-27)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/kit from 3.0.9 to 3.0.11 ([7ed90f5](https://github.com/salesforcecli/plugin-limits/commit/7ed90f53d8ee838737789a6c973009f02ffe4c3d))
+
+
+
 ## [2.3.31](https://github.com/salesforcecli/plugin-limits/compare/2.3.30...2.3.31) (2023-08-20)
 
 
