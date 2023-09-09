@@ -765,13 +765,13 @@
     lodash "^4.17.21"
     semver "^7.5.4"
 
-"@oclif/test@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-2.4.1.tgz#08202bed31dd9343b4e1f0f1f63b7e073df466ec"
-  integrity sha512-SO4a3xVZ5Gr2dB0QlhwkD15MKRdwVp8LgJdSGBk0eZYsNmV+LamVeNR1OWJi+ZwN7w+WPmKja2r3OHsAXTaGsQ==
+"@oclif/test@^2.5.3":
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-2.5.3.tgz#08ee0ab60858784ceca11a723445f4ed09c625da"
+  integrity sha512-TmtfMhK9tFCVQ4NyIG9eYW4RBQAmKbkE+pGXsdxiTZvR2sR1WwC7NmmEbTaj2hYNWX3vNZ/x1+odnjLEo6z5Vw==
   dependencies:
-    "@oclif/core" "^2.11.1"
-    fancy-test "^2.0.31"
+    "@oclif/core" "^2.15.0"
+    fancy-test "^2.0.37"
 
 "@octokit/auth-token@^2.4.4":
   version "2.5.0"
@@ -3072,10 +3072,10 @@ external-editor@^3.0.3:
     iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
-fancy-test@^2.0.31:
-  version "2.0.33"
-  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-2.0.33.tgz#09d52aa91d70e0082871a2ae804b5819d34024e4"
-  integrity sha512-Bu8rNOyF0CxnF5KygWstRMRVX8m0EVsEQ9nqV6xjKvpJwsLLfiDeLTQgEEqFfVlBn3eJo7YFvkwzxLkJn+KD2A==
+fancy-test@^2.0.37:
+  version "2.0.38"
+  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-2.0.38.tgz#a093234a39fa3effb2d6d4ffb02f21b7cf8297f5"
+  integrity sha512-uQ795eOLJ5aJJypwJ0g1Pqk9Zp5s1Git+XmaGX1e06wwaSr+K6o+FPYuHlQmetBXxPLx81xst2l7j624v5ZqdQ==
   dependencies:
     "@types/chai" "*"
     "@types/lodash" "*"
@@ -3083,7 +3083,7 @@ fancy-test@^2.0.31:
     "@types/sinon" "*"
     lodash "^4.17.13"
     mock-stdin "^1.0.0"
-    nock "^13.3.2"
+    nock "^13.3.3"
     stdout-stderr "^0.1.9"
 
 fast-copy@^3.0.0:
@@ -5084,10 +5084,10 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
-nock@^13.3.2:
-  version "13.3.2"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-13.3.2.tgz#bfa6be92d37f744b1b758ea89b1105cdaf5c8b3f"
-  integrity sha512-CwbljitiWJhF1gL83NbanhoKs1l23TDlRioNraPTZrzZIEooPemrHRj5m0FZCPkB1ecdYCSWWGcHysJgX/ngnQ==
+nock@^13.3.3:
+  version "13.3.3"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-13.3.3.tgz#179759c07d3f88ad3e794ace885629c1adfd3fe7"
+  integrity sha512-z+KUlILy9SK/RjpeXDiDUEAq4T94ADPHE3qaRkf66mpEhzc/ytOMm3Bwdrbq6k1tMWkbdujiKim3G2tfQARuJw==
   dependencies:
     debug "^4.1.0"
     json-stringify-safe "^5.0.1"
