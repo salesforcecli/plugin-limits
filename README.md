@@ -70,77 +70,89 @@ sfdx plugins
 
 <!-- commands -->
 
-- [`sfdx force:limits:api:display [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-forcelimitsapidisplay--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
-- [`sfdx force:limits:recordcounts:display [-s <array>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-forcelimitsrecordcountsdisplay--s-array--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+- [`sfdx limits:api:display`](#sfdx-limitsapidisplay)
+- [`sfdx limits:recordcounts:display`](#sfdx-limitsrecordcountsdisplay)
 
-## `sfdx force:limits:api:display [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+## `sfdx limits:api:display`
 
-display current org’s limits
+Display information about limits in your org.
 
 ```
 USAGE
-  $ sfdx force:limits:api:display [-u <string>] [--apiversion <string>] [--json] [--loglevel
-  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+  $ sfdx limits:api:display -o <value> [--json] [--api-version <value>]
 
-OPTIONS
-  -u, --targetusername=targetusername                                               username or alias for the target
-                                                                                    org; overrides default target org
+FLAGS
+  -o, --target-org=<value>  (required) Username or alias of the target org.
+  --api-version=<value>     Override the api version used for api requests made by this command
 
-  --apiversion=apiversion                                                           override the api version used for
-                                                                                    api requests made by this command
-
-  --json                                                                            format output as json
-
-  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
-                                                                                    this command invocation
+GLOBAL FLAGS
+  --json  Format output as json.
 
 DESCRIPTION
-  When you execute this command in a project, it provides limit information for your default scratch org.
+  Display information about limits in your org.
 
-EXAMPLES
+  For each limit, this command returns the maximum allocation and the remaining allocation based on usage. See this
+  topic for a description of each limit:
+  https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_limits.htm.
+
+ALIASES
   $ sfdx force:limits:api:display
-  $ sfdx force:limits:api:display -u me@my.org
+  $ sfdx org:list:limits
+
+EXAMPLES
+  Display limits in your default org:
+
+    $ sfdx limits:api:display
+
+  Display limits in the org with alias "my-scratch-org":
+
+    $ sfdx limits:api:display --target-org my-scratch-org
 ```
 
-_See code: [src/commands/force/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v2.0.0/src/commands/force/limits/api/display.ts)_
+_See code: [src/commands/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.35/src/commands/limits/api/display.ts)_
 
-## `sfdx force:limits:recordcounts:display [-s <array>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+## `sfdx limits:recordcounts:display`
 
-display record counts for the specified standard and custom objects
+Display record counts for the specified standard or custom objects.
 
 ```
 USAGE
-  $ sfdx force:limits:recordcounts:display [-s <array>] [-u <string>] [--apiversion <string>] [--json] [--loglevel
-  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+  $ sfdx limits:recordcounts:display -o <value> [--json] [-s <value>] [--api-version <value>]
 
-OPTIONS
-  -s, --sobjecttype=sobjecttype                                                     comma-separated list of API names of
-                                                                                    standard or custom objects for which
-                                                                                    to display record counts
+FLAGS
+  -o, --target-org=<value>  (required) Username or alias of the target org.
+  -s, --sobject=<value>...  [default: ] API name of the standard or custom object for which to display record counts.
+  --api-version=<value>     Override the api version used for api requests made by this command
 
-  -u, --targetusername=targetusername                                               username or alias for the target
-                                                                                    org; overrides default target org
-
-  --apiversion=apiversion                                                           override the api version used for
-                                                                                    api requests made by this command
-
-  --json                                                                            format output as json
-
-  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
-                                                                                    this command invocation
+GLOBAL FLAGS
+  --json  Format output as json.
 
 DESCRIPTION
+  Display record counts for the specified standard or custom objects.
+
   Use this command to get an approximate count of the records in standard or custom objects in your org. These record
-  counts are the same as the counts listed in the Storage Usage page in Setup. The record counts are approximate because
-   they're calculated asynchronously and your org's storage usage isn't updated immediately. To display all available
-  record counts, run the command without the '--sobjecttype' parameter.
+  counts are the same as the counts listed in the Storage Usage page in the Setup UI. The record counts are approximate
+  because they're calculated asynchronously and your org's storage usage isn't updated immediately. To display all
+  available record counts, run the command without the --sobject flag.
+
+ALIASES
+  $ sfdx force:limits:recordcounts:display
+  $ sfdx org:list:sobject:record-counts
 
 EXAMPLES
-  $ sfdx force:limits:recordcounts:display
-  $ sfdx force:limits:recordcounts:display -s Account,Contact,Lead,Opportunity
-  $ sfdx force:limits:recordcounts:display -s Account,Contact -u me@my.org
+  Display all available record counts in your default org:
+
+    $ sfdx limits:recordcounts:display
+
+  Display record counts for the Account, Contact, Lead, and Opportunity objects in your default org:
+
+    $ sfdx limits:recordcounts:display --sobject Account --sobject Contact --sobject Lead --sobject Opportunity
+
+  Display record counts for the Account and Lead objects for the org with alias "my-scratch-org":
+
+    $ sfdx limits:recordcounts:display --sobject Account --sobject Lead --target-org my-scratch-org
 ```
 
-_See code: [src/commands/force/limits/recordcounts/display.ts](https://github.com/salesforcecli/plugin-limits/blob/v2.0.0/src/commands/force/limits/recordcounts/display.ts)_
+_See code: [src/commands/limits/recordcounts/display.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.35/src/commands/limits/recordcounts/display.ts)_
 
 <!-- commandsstop -->
