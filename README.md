@@ -109,7 +109,7 @@ EXAMPLES
     $ sfdx limits:api:display --target-org my-scratch-org
 ```
 
-_See code: [src/commands/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.38/src/commands/limits/api/display.ts)_
+_See code: [src/commands/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.39/src/commands/limits/api/display.ts)_
 
 ## `sfdx limits:recordcounts:display`
 
@@ -153,6 +153,6 @@ EXAMPLES
     $ sfdx limits:recordcounts:display --sobject Account --sobject Lead --target-org my-scratch-org
 ```
 
-_See code: [src/commands/limits/recordcounts/display.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.38/src/commands/limits/recordcounts/display.ts)_
+_See code: [src/commands/limits/recordcounts/display.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.39/src/commands/limits/recordcounts/display.ts)_
 
 <!-- commandsstop -->
