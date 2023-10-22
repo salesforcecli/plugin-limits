@@ -1,3 +1,9 @@
+## [2.3.41](https://github.com/salesforcecli/plugin-limits/compare/2.3.40...2.3.41) (2023-10-22)
+
+### Bug Fixes
+
+- **deps:** bump @salesforce/ts-types from 2.0.8 to 2.0.9 ([1f15bca](https://github.com/salesforcecli/plugin-limits/commit/1f15bca18a572f7cd5883dbfd9f510ed75ffd512))
+
 ## [2.3.40](https://github.com/salesforcecli/plugin-limits/compare/2.3.39...2.3.40) (2023-10-22)
 
 ### Bug Fixes
