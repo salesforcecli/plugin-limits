@@ -8,7 +8,7 @@ import { expect } from 'chai';
 import { execCmd, TestSession } from '@salesforce/cli-plugins-testkit';
 import { Env } from '@salesforce/kit';
 import { ensureString, getString } from '@salesforce/ts-types';
-import { RecordCount } from '../../src/commands/limits/recordcounts/display';
+import { RecordCount } from '../../src/commands/limits/recordcounts/display.js';
 
 describe('recordcounts:display', () => {
   const env = new Env();

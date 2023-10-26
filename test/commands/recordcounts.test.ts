@@ -5,7 +5,7 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 import { Connection, Org } from '@salesforce/core';
-import { TestContext } from '@salesforce/core/lib/testSetup';
+import { TestContext } from '@salesforce/core/lib/testSetup.js';
 import { test } from '@oclif/test';
 import { expect } from 'chai';
 
