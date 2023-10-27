@@ -10,7 +10,7 @@ import { test } from '@oclif/test';
 import { expect } from 'chai';
 
 import { parseJson } from '@salesforce/kit';
-import { ApiLimits } from '../../src/commands/limits/api/display.js';
+import { ApiLimits } from '../../src/commands/org/list/limits.js';
 
 describe('force:limits:api:display', () => {
   const $$ = new TestContext();

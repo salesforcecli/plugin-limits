@@ -20,10 +20,6 @@ Use this command to get an approximate count of the records in standard or custo
 
   <%= config.bin %> <%= command.id %> --sobject Account --sobject Lead --target-org my-scratch-org
 
-# sobjectFlagDescription
+# flags.sobject.summary
 
 API name of the standard or custom object for which to display record counts.
-
-# targetOrg
-
-Login username or alias for the target org.

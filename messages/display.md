@@ -15,7 +15,3 @@ For each limit, this command returns the maximum allocation and the remaining al
 - Display limits in the org with alias "my-scratch-org":
 
   <%= config.bin %> <%= command.id %> --target-org my-scratch-org
-
-# targetOrg
-
-Login username or alias for the target org.
