@@ -4,6 +4,8 @@
  * Licensed under the BSD 3-Clause license.
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { Messages, SfError } from '@salesforce/core';
 import {
   arrayWithDeprecation,
@@ -13,7 +15,7 @@ import {
   SfCommand,
 } from '@salesforce/sf-plugins-core';
 
-Messages.importMessagesDirectory(__dirname);
+Messages.importMessagesDirectory(dirname(fileURLToPath(import.meta.url)));
 const messages = Messages.loadMessages('@salesforce/plugin-limits', 'recordcounts');
 
 export type RecordCount = {
@@ -28,7 +30,7 @@ interface Result {
 }
 
 export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
-  public static readonly aliases = ['force:limits:recordcounts:display', 'org:list:sobject:record-counts'];
+  public static readonly aliases = ['force:limits:recordcounts:display', 'limits:recordcounts:display'];
   public static readonly summary = messages.getMessage('summary');
   public static readonly description = messages.getMessage('description');
   public static readonly examples = messages.getMessages('examples');
@@ -36,7 +38,7 @@ export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
   public static readonly flags = {
     sobject: arrayWithDeprecation({
       char: 's',
-      summary: messages.getMessage('sobjectFlagDescription'),
+      summary: messages.getMessage('flags.sobject.summary'),
       aliases: ['sobjecttype'],
       default: [],
     }),
