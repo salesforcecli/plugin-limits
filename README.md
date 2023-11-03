@@ -70,16 +70,16 @@ sfdx plugins
 
 <!-- commands -->
 
-- [`sfdx limits:api:display`](#sfdx-limitsapidisplay)
-- [`sfdx limits:recordcounts:display`](#sfdx-limitsrecordcountsdisplay)
+- [`sf org list limits`](#sf-org-list-limits)
+- [`sf org list sobject record-counts`](#sf-org-list-sobject-record-counts)
 
-## `sfdx limits:api:display`
+## `sf org list limits`
 
 Display information about limits in your org.
 
 ```
 USAGE
-  $ sfdx limits:api:display -o <value> [--json] [--api-version <value>]
+  $ sf org list limits -o <value> [--json] [--api-version <value>]
 
 FLAGS
   -o, --target-org=<value>  (required) Username or alias of the target org.
@@ -96,28 +96,28 @@ DESCRIPTION
   https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_limits.htm.
 
 ALIASES
-  $ sfdx force:limits:api:display
-  $ sfdx org:list:limits
+  $ sf force limits api display
+  $ sf limits api display
 
 EXAMPLES
   Display limits in your default org:
 
-    $ sfdx limits:api:display
+    $ sf org list limits
 
   Display limits in the org with alias "my-scratch-org":
 
-    $ sfdx limits:api:display --target-org my-scratch-org
+    $ sf org list limits --target-org my-scratch-org
 ```
 
-_See code: [src/commands/limits/api/display.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.41/src/commands/limits/api/display.ts)_
+_See code: [src/commands/org/list/limits.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.42/src/commands/org/list/limits.ts)_
 
-## `sfdx limits:recordcounts:display`
+## `sf org list sobject record-counts`
 
 Display record counts for the specified standard or custom objects.
 
 ```
 USAGE
-  $ sfdx limits:recordcounts:display -o <value> [--json] [-s <value>] [--api-version <value>]
+  $ sf org list sobject record-counts -o <value> [--json] [-s <value>] [--api-version <value>]
 
 FLAGS
   -o, --target-org=<value>  (required) Username or alias of the target org.
@@ -136,23 +136,23 @@ DESCRIPTION
   available record counts, run the command without the --sobject flag.
 
 ALIASES
-  $ sfdx force:limits:recordcounts:display
-  $ sfdx org:list:sobject:record-counts
+  $ sf force limits recordcounts display
+  $ sf limits recordcounts display
 
 EXAMPLES
   Display all available record counts in your default org:
 
-    $ sfdx limits:recordcounts:display
+    $ sf org list sobject record-counts
 
   Display record counts for the Account, Contact, Lead, and Opportunity objects in your default org:
 
-    $ sfdx limits:recordcounts:display --sobject Account --sobject Contact --sobject Lead --sobject Opportunity
+    $ sf org list sobject record-counts --sobject Account --sobject Contact --sobject Lead --sobject Opportunity
 
   Display record counts for the Account and Lead objects for the org with alias "my-scratch-org":
 
-    $ sfdx limits:recordcounts:display --sobject Account --sobject Lead --target-org my-scratch-org
+    $ sf org list sobject record-counts --sobject Account --sobject Lead --target-org my-scratch-org
 ```
 
-_See code: [src/commands/limits/recordcounts/display.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.41/src/commands/limits/recordcounts/display.ts)_
+_See code: [src/commands/org/list/sobject/record-counts.ts](https://github.com/salesforcecli/plugin-limits/blob/2.3.42/src/commands/org/list/sobject/record-counts.ts)_
 
 <!-- commandsstop -->

@@ -1,3 +1,9 @@
+## [3.0.1](https://github.com/salesforcecli/plugin-limits/compare/2.3.41...3.0.1) (2023-11-03)
+
+### Bug Fixes
+
+- 3.0.0 release ([2c5ac31](https://github.com/salesforcecli/plugin-limits/commit/2c5ac3171dbfd81d0bdb9ce116a3a4b19b51ffec))
+
 ## [2.3.41](https://github.com/salesforcecli/plugin-limits/compare/2.3.40...2.3.41) (2023-10-22)
 
 ### Bug Fixes
