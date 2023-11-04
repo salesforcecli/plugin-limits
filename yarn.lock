@@ -909,11 +909,11 @@
     "@octokit/openapi-types" "^12.11.0"
 
 "@salesforce/cli-plugins-testkit@^5":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@salesforce/cli-plugins-testkit/-/cli-plugins-testkit-5.0.0.tgz#0ced85db4ca9f38ea0f486782c1e132fa43fe843"
-  integrity sha512-j0M7XC09ctpreFL6aPXkDIEZujlnNId4JMtTzfWA++Lpzj4PVj84zPBdXzGWSold/m9pf4EC7HZWaFS9kK/KVQ==
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@salesforce/cli-plugins-testkit/-/cli-plugins-testkit-5.0.1.tgz#d1c3e48ccee2b344ff02a0f9f136bb28ccb3290f"
+  integrity sha512-4O5THA4Ly/JJ7p/08KNCOOwbBoBoa4GU9WoL5td/nQEQGQ9Abo2QhpTWVyUzKApVqx2POSS7XYqyDHkCZ/YxPQ==
   dependencies:
-    "@salesforce/core" "^5.3.10"
+    "@salesforce/core" "^5.3.17"
     "@salesforce/kit" "^3.0.15"
     "@salesforce/ts-types" "^2.0.6"
     "@types/shelljs" "^0.8.14"
