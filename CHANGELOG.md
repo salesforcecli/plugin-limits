@@ -1,3 +1,9 @@
+## [3.0.2](https://github.com/salesforcecli/plugin-limits/compare/3.0.1...3.0.2) (2023-11-15)
+
+### Bug Fixes
+
+- **deps:** updates from devScripts ([#695](https://github.com/salesforcecli/plugin-limits/issues/695)) and core v6 ([59c8db3](https://github.com/salesforcecli/plugin-limits/commit/59c8db340b84376559c1b2f1e56bde500d668d66))
+
 ## [3.0.1](https://github.com/salesforcecli/plugin-limits/compare/2.3.41...3.0.1) (2023-11-03)
 
 ### Bug Fixes
