@@ -82,7 +82,8 @@ USAGE
   $ sf org list limits -o <value> [--json] [--api-version <value>]
 
 FLAGS
-  -o, --target-org=<value>   (required) Username or alias of the target org.
+  -o, --target-org=<value>   (required) Username or alias of the target org. Not required if the `target-org`
+                             configuration variable is already set.
       --api-version=<value>  Override the api version used for api requests made by this command
 
 GLOBAL FLAGS
@@ -109,7 +110,7 @@ EXAMPLES
     $ sf org list limits --target-org my-scratch-org
 ```
 
-_See code: [src/commands/org/list/limits.ts](https://github.com/salesforcecli/plugin-limits/blob/3.0.2/src/commands/org/list/limits.ts)_
+_See code: [src/commands/org/list/limits.ts](https://github.com/salesforcecli/plugin-limits/blob/3.0.3/src/commands/org/list/limits.ts)_
 
 ## `sf org list sobject record-counts`
 
@@ -120,7 +121,8 @@ USAGE
   $ sf org list sobject record-counts -o <value> [--json] [-s <value>] [--api-version <value>]
 
 FLAGS
-  -o, --target-org=<value>   (required) Username or alias of the target org.
+  -o, --target-org=<value>   (required) Username or alias of the target org. Not required if the `target-org`
+                             configuration variable is already set.
   -s, --sobject=<value>...   [default: ] API name of the standard or custom object for which to display record counts.
       --api-version=<value>  Override the api version used for api requests made by this command
 
@@ -153,6 +155,6 @@ EXAMPLES
     $ sf org list sobject record-counts --sobject Account --sobject Lead --target-org my-scratch-org
 ```
 
-_See code: [src/commands/org/list/sobject/record-counts.ts](https://github.com/salesforcecli/plugin-limits/blob/3.0.2/src/commands/org/list/sobject/record-counts.ts)_
+_See code: [src/commands/org/list/sobject/record-counts.ts](https://github.com/salesforcecli/plugin-limits/blob/3.0.3/src/commands/org/list/sobject/record-counts.ts)_
 
 <!-- commandsstop -->
