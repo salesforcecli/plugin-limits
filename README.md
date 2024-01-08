@@ -110,7 +110,7 @@ EXAMPLES
     $ sf org list limits --target-org my-scratch-org
 ```
 
-_See code: [src/commands/org/list/limits.ts](https://github.com/salesforcecli/plugin-limits/blob/3.1.1/src/commands/org/list/limits.ts)_
+_See code: [src/commands/org/list/limits.ts](https://github.com/salesforcecli/plugin-limits/blob/3.1.2/src/commands/org/list/limits.ts)_
 
 ## `sf org list sobject record-counts`
 
@@ -155,6 +155,6 @@ EXAMPLES
     $ sf org list sobject record-counts --sobject Account --sobject Lead --target-org my-scratch-org
 ```
 
-_See code: [src/commands/org/list/sobject/record-counts.ts](https://github.com/salesforcecli/plugin-limits/blob/3.1.1/src/commands/org/list/sobject/record-counts.ts)_
+_See code: [src/commands/org/list/sobject/record-counts.ts](https://github.com/salesforcecli/plugin-limits/blob/3.1.2/src/commands/org/list/sobject/record-counts.ts)_
 
 <!-- commandsstop -->

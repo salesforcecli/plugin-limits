@@ -1,3 +1,9 @@
+## [3.1.2](https://github.com/salesforcecli/plugin-limits/compare/3.1.1...3.1.2) (2024-01-08)
+
+### Bug Fixes
+
+- **deps:** plugins-core v7 ([#741](https://github.com/salesforcecli/plugin-limits/issues/741)) ([adc3594](https://github.com/salesforcecli/plugin-limits/commit/adc359427912f1c0827afd11c66b97ee2752c295))
+
 ## [3.1.1](https://github.com/salesforcecli/plugin-limits/compare/3.1.0...3.1.1) (2024-01-07)
 
 ### Bug Fixes
