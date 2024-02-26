@@ -1,3 +1,5 @@
+## [3.1.12](https://github.com/salesforcecli/plugin-limits/compare/3.1.11...3.1.12) (2024-02-26)
+
 ## [3.1.11](https://github.com/salesforcecli/plugin-limits/compare/3.1.10...3.1.11) (2024-02-26)
 
 ### Bug Fixes
