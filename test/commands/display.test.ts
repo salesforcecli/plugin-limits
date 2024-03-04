@@ -20,12 +20,12 @@ describe('force:limits:api:display', () => {
     $$.SANDBOX.stub(Org.prototype, 'getConnection').returns(Connection.prototype);
     $$.SANDBOX.stub(Connection.prototype, 'request').resolves({
       AnalyticsExternalDataSizeMB: {
-        Max: 40960,
-        Remaining: 40960,
+        Max: 40_960,
+        Remaining: 40_960,
       },
       BOZosCalloutHourlyLimit: {
-        Max: 20000,
-        Remaining: 20000,
+        Max: 20_000,
+        Remaining: 20_000,
       },
       ConcurrentAsyncGetReportInstances: {
         Max: 200,
@@ -44,13 +44,13 @@ describe('force:limits:api:display', () => {
         const expected = [
           {
             name: 'AnalyticsExternalDataSizeMB',
-            max: 40960,
-            remaining: 40960,
+            max: 40_960,
+            remaining: 40_960,
           },
           {
             name: 'BOZosCalloutHourlyLimit',
-            max: 20000,
-            remaining: 20000,
+            max: 20_000,
+            remaining: 20_000,
           },
           {
             name: 'ConcurrentAsyncGetReportInstances',
