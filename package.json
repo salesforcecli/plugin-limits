@@ -11,7 +11,7 @@
     "@salesforce/sf-plugins-core": "^7.1.15"
   },
   "devDependencies": {
-    "@oclif/plugin-command-snapshot": "^5.1.1",
+    "@oclif/plugin-command-snapshot": "^5.1.2",
     "@oclif/test": "^3",
     "@salesforce/cli-plugins-testkit": "^5.1.11",
     "@salesforce/dev-scripts": "^8.4.2",
