@@ -1,3 +1,9 @@
+# [3.2.0](https://github.com/salesforcecli/plugin-limits/compare/3.1.15...3.2.0) (2024-03-25)
+
+### Features
+
+- bump sf-plugins-core ([#824](https://github.com/salesforcecli/plugin-limits/issues/824)) ([fe2c54e](https://github.com/salesforcecli/plugin-limits/commit/fe2c54e4016385e03a516115b00cc9a67d12a482))
+
 ## [3.1.15](https://github.com/salesforcecli/plugin-limits/compare/3.1.14...3.1.15) (2024-03-24)
 
 ### Bug Fixes
