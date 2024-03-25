@@ -4,7 +4,7 @@
     "command": "org:list:limits",
     "flagAliases": ["apiversion", "targetusername", "u"],
     "flagChars": ["o"],
-    "flags": ["api-version", "json", "loglevel", "target-org"],
+    "flags": ["api-version", "flags-dir", "json", "loglevel", "target-org"],
     "plugin": "@salesforce/plugin-limits"
   },
   {
@@ -12,7 +12,7 @@
     "command": "org:list:sobject:record-counts",
     "flagAliases": ["apiversion", "sobjecttype", "targetusername", "u"],
     "flagChars": ["o", "s"],
-    "flags": ["api-version", "json", "loglevel", "sobject", "target-org"],
+    "flags": ["api-version", "flags-dir", "json", "loglevel", "sobject", "target-org"],
     "plugin": "@salesforce/plugin-limits"
   }
 ]
