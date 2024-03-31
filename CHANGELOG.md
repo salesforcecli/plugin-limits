@@ -1,3 +1,9 @@
+## [3.2.1](https://github.com/salesforcecli/plugin-limits/compare/3.2.0...3.2.1) (2024-03-31)
+
+### Bug Fixes
+
+- **deps:** bump @salesforce/sf-plugins-core from 8.0.1 to 8.0.2 ([b316402](https://github.com/salesforcecli/plugin-limits/commit/b3164029843959104721883e449b0c71a709f212))
+
 # [3.2.0](https://github.com/salesforcecli/plugin-limits/compare/3.1.15...3.2.0) (2024-03-25)
 
 ### Features
