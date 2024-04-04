@@ -14,13 +14,13 @@
     "@oclif/plugin-command-snapshot": "^5.1.2",
     "@oclif/test": "^3",
     "@salesforce/cli-plugins-testkit": "^5.1.13",
-    "@salesforce/dev-scripts": "^8.4.2",
+    "@salesforce/dev-scripts": "^8.4.3",
     "@salesforce/plugin-command-reference": "^3.0.73",
     "@salesforce/ts-types": "^2.0.9",
     "eslint-plugin-sf-plugin": "^1.17.5",
     "oclif": "^4.6.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "config": {},
   "engines": {
