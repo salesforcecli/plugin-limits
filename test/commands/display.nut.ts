@@ -9,7 +9,7 @@ import { execCmd, TestSession } from '@salesforce/cli-plugins-testkit';
 import { Env } from '@salesforce/kit';
 import { ensureString, getString } from '@salesforce/ts-types';
 
-export interface ListApiDisplayOutput {
+export type ListApiDisplayOutput = {
   status: number;
   result: Array<Record<string, unknown>>;
 }

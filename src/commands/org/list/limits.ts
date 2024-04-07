@@ -22,7 +22,7 @@ type ApiLimit = {
   remaining: number;
 };
 
-interface Result {
+type Result = {
   [key: string]: {
     Max: number;
     Remaining: number;
