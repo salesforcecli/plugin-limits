@@ -24,7 +24,7 @@ export type RecordCount = {
 
 export type RecordCounts = RecordCount[];
 
-interface Result {
+type Result = {
   sObjects: RecordCounts;
 }
 
