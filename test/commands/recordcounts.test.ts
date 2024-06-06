@@ -6,7 +6,7 @@
  */
 import { Connection, Org } from '@salesforce/core';
 import { TestContext } from '@salesforce/core/testSetup';
-import { test } from '@oclif/test';
+import { runCommand } from '@oclif/test';
 import { expect } from 'chai';
 
 describe('force:limits:recordcounts:display', () => {
@@ -24,51 +24,41 @@ describe('force:limits:recordcounts:display', () => {
   }
 
   it('queries and aggregates data correctly', () => {
-    test
-      .do(() => prepareStubs())
-      .stdout()
-      .command(['force:limits:recordcounts:display', '--sobjecttype', 'Account,Contact', '--json'])
-      .it('displays the expected results correctly', (ctx) => {
-        const expected = [
-          {
-            name: 'Account',
-            count: 34,
-          },
-          {
-            name: 'Contact',
-            count: 116,
-          },
-        ];
-
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-        const result = JSON.parse(ctx.stdout).result;
-        expect(result).to.deep.equal(expected);
-      });
+    it('displays the expected results correctly', async () => {
+      await prepareStubs();
+      const result = await runCommand('force:limits:recordcounts:display');
+      const expected = [
+        {
+          name: 'Account',
+          count: 34,
+        },
+        {
+          name: 'Contact',
+          count: 116,
+        },
+      ];
+      expect(result).to.deep.equal(expected);
+    });
   });
   it('will add flag option if 0 counted returned', () => {
-    test
-      .do(() => prepareStubs())
-      .stdout()
-      .command(['force:limits:recordcounts:display', '--sobjecttype', 'Account,Contact,Lead', '--json'])
-      .it('displays the expected results correctly', (ctx) => {
-        const expected = [
-          {
-            name: 'Account',
-            count: 34,
-          },
-          {
-            name: 'Contact',
-            count: 116,
-          },
-          {
-            name: 'Lead',
-            count: 0,
-          },
-        ];
-
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-        const result = JSON.parse(ctx.stdout).result;
-        expect(result).to.deep.equal(expected);
-      });
+    it('displays the expected results correctly', async () => {
+      await prepareStubs();
+      const result = await runCommand('force:limits:recordcounts:display');
+      const expected = [
+        {
+          name: 'Account',
+          count: 34,
+        },
+        {
+          name: 'Contact',
+          count: 116,
+        },
+        {
+          name: 'Lead',
+          count: 0,
+        },
+      ];
+      expect(result).to.deep.equal(expected);
+    });
   });
 });
