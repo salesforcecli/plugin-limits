@@ -111,7 +111,7 @@ EXAMPLES
     $ sf org list limits --target-org my-scratch-org
 ```
 
-_See code: [src/commands/org/list/limits.ts](https://github.com/salesforcecli/plugin-limits/blob/3.3.10/src/commands/org/list/limits.ts)_
+_See code: [src/commands/org/list/limits.ts](https://github.com/salesforcecli/plugin-limits/blob/3.3.11/src/commands/org/list/limits.ts)_
 
 ## `sf org list sobject record-counts`
 
@@ -119,7 +119,7 @@ Display record counts for the specified standard or custom objects.
 
 ```
 USAGE
-  $ sf org list sobject record-counts -o <value> [--json] [--flags-dir <value>] [-s <value>] [--api-version <value>]
+  $ sf org list sobject record-counts -o <value> [--json] [--flags-dir <value>] [-s <value>...] [--api-version <value>]
 
 FLAGS
   -o, --target-org=<value>   (required) Username or alias of the target org. Not required if the `target-org`
@@ -157,6 +157,6 @@ EXAMPLES
     $ sf org list sobject record-counts --sobject Account --sobject Lead --target-org my-scratch-org
 ```
 
-_See code: [src/commands/org/list/sobject/record-counts.ts](https://github.com/salesforcecli/plugin-limits/blob/3.3.10/src/commands/org/list/sobject/record-counts.ts)_
+_See code: [src/commands/org/list/sobject/record-counts.ts](https://github.com/salesforcecli/plugin-limits/blob/3.3.11/src/commands/org/list/sobject/record-counts.ts)_
 
 <!-- commandsstop -->
