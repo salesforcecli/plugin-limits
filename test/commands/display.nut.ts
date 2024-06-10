@@ -12,7 +12,7 @@ import { ensureString, getString } from '@salesforce/ts-types';
 export type ListApiDisplayOutput = {
   status: number;
   result: Array<Record<string, unknown>>;
-}
+};
 
 describe('Limits display', () => {
   const env = new Env();

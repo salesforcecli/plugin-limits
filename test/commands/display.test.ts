@@ -8,8 +8,6 @@ import { Connection, Org } from '@salesforce/core';
 import { TestContext } from '@salesforce/core/testSetup';
 import { runCommand } from '@oclif/test';
 import { expect } from 'chai';
-
-// import { parseJson } from '@salesforce/kit';
 import { ApiLimits } from '../../src/commands/org/list/limits.js';
 
 describe('force:limits:api:display', () => {
