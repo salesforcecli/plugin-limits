@@ -1,3 +1,9 @@
+## [3.3.13](https://github.com/salesforcecli/plugin-limits/compare/3.3.12...3.3.13) (2024-06-13)
+
+### Bug Fixes
+
+- **deps:** bump braces from 3.0.2 to 3.0.3 ([ac8de27](https://github.com/salesforcecli/plugin-limits/commit/ac8de279091f2b1fe034963db1891e5d09039754))
+
 ## [3.3.12](https://github.com/salesforcecli/plugin-limits/compare/3.3.11...3.3.12) (2024-06-09)
 
 ### Bug Fixes
