@@ -1,3 +1,9 @@
+## [3.3.15](https://github.com/salesforcecli/plugin-limits/compare/3.3.14...3.3.15) (2024-06-21)
+
+### Bug Fixes
+
+- oclif/core is devDep, drop kit ([#918](https://github.com/salesforcecli/plugin-limits/issues/918)) ([be5013a](https://github.com/salesforcecli/plugin-limits/commit/be5013a402a4870e19def17cb24cee22fe8a75c4))
+
 ## [3.3.14](https://github.com/salesforcecli/plugin-limits/compare/3.3.13...3.3.14) (2024-06-20)
 
 ### Bug Fixes
