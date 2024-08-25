@@ -1,3 +1,9 @@
+## [3.3.27](https://github.com/salesforcecli/plugin-limits/compare/3.3.26...3.3.27) (2024-08-25)
+
+### Bug Fixes
+
+- **deps:** bump micromatch from 4.0.7 to 4.0.8 ([1e2886b](https://github.com/salesforcecli/plugin-limits/commit/1e2886b140f2207525856f71151029c2404abae2))
+
 ## [3.3.26](https://github.com/salesforcecli/plugin-limits/compare/3.3.25...3.3.26) (2024-08-25)
 
 ### Bug Fixes
