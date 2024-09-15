@@ -1571,10 +1571,10 @@
   dependencies:
     "@salesforce/ts-types" "^2.0.12"
 
-"@salesforce/plugin-command-reference@^3.1.21":
-  version "3.1.21"
-  resolved "https://registry.yarnpkg.com/@salesforce/plugin-command-reference/-/plugin-command-reference-3.1.21.tgz#0f6fb836921b725ad9ecf4a41a1c03e03d372f07"
-  integrity sha512-Ag0ZOLUOejDvhOySvNcl2QnU+XBulUpmTWz+B7M+6XxgUeDR5j1F8UbsTFgN0KTFfTx2vwaPUkz0fjvRqMJG2g==
+"@salesforce/plugin-command-reference@^3.1.23":
+  version "3.1.23"
+  resolved "https://registry.yarnpkg.com/@salesforce/plugin-command-reference/-/plugin-command-reference-3.1.23.tgz#71969e939a114b69eab5aa099fe7b1fec1444402"
+  integrity sha512-w04Ff0JWt3I64bustH+wM07OgMwuKzuYMBkCwvDq/mU4lHWyLVvP3Kc6ByqziPUdnx9oczyxEl2qSXTaS2odtQ==
   dependencies:
     "@oclif/core" "^4"
     "@salesforce/core" "^8.3.0"
@@ -1582,7 +1582,7 @@
     "@salesforce/sf-plugins-core" "^11.3.5"
     "@salesforce/ts-types" "^2.0.11"
     chalk "^5.3.0"
-    debug "^4.3.6"
+    debug "^4.3.7"
     handlebars "^4.7.8"
 
 "@salesforce/prettier-config@^0.0.3":
