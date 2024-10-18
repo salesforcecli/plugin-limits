@@ -1,3 +1,9 @@
+## [3.3.35](https://github.com/salesforcecli/plugin-limits/compare/3.3.34...3.3.35) (2024-10-18)
+
+### Reverts
+
+- Revert "fix: update new tables for recordCounts and limits" ([e797989](https://github.com/salesforcecli/plugin-limits/commit/e797989eb15c0ccd34a962dc4eb886a5fd7e346f))
+
 ## [3.3.34](https://github.com/salesforcecli/plugin-limits/compare/3.3.33...3.3.34) (2024-10-18)
 
 ### Bug Fixes
