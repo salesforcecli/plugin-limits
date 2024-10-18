@@ -26,7 +26,7 @@ export type RecordCounts = RecordCount[];
 
 type Result = {
   sObjects: RecordCounts;
-};
+}
 
 export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
   public static readonly aliases = ['force:limits:recordcounts:display', 'limits:recordcounts:display'];
@@ -59,20 +59,10 @@ export class LimitsRecordCountsDisplayCommand extends SfCommand<RecordCounts> {
         .filter((record) => (flags.sobject.length > 0 ? flags.sobject.includes(record.name) : result.sObjects))
         .sort((a, b) => a.name.localeCompare(b.name));
 
-      this.table({
-        data: recordCounts,
-        columns: [
-          {
-            key: 'name',
-            name: 'sObject',
-          },
-          {
-            key: 'count',
-            name: 'Record Count',
-          },
-        ],
+      this.table(recordCounts, {
+        name: { header: 'sObject' },
+        count: { header: 'Record Count' },
       });
-
       return recordCounts;
     } catch (err) {
       if (err instanceof Error || typeof err === 'string') {
