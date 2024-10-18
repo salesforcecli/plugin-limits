@@ -27,7 +27,7 @@ type Result = {
     Max: number;
     Remaining: number;
   };
-}
+};
 
 export type ApiLimits = ApiLimit[];
 
@@ -54,7 +54,10 @@ export class LimitsApiDisplayCommand extends SfCommand<ApiLimits> {
         remaining: Remaining,
       }));
 
-      this.table(limits, { name: { header: 'Name' }, remaining: { header: 'Remaining' }, max: { header: 'Max' } });
+      this.table({
+        data: limits,
+        columns: ['name', 'remaining', 'max'],
+      });
 
       return limits;
     } catch (err) {
