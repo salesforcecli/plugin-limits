@@ -1521,10 +1521,10 @@
     http-call "^5.2.2"
     lodash "^4.17.21"
 
-"@oclif/table@^0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@oclif/table/-/table-0.1.22.tgz#d2f85f2da6141a02afb8efa9ac05651850ef4df8"
-  integrity sha512-2qW47gCfFqj/OhIMAA+ZE2mfeQ9ub3Sv3hrachwXJ9o8d6bfBKlgHbfJ5+SxJlur+ecXL+GdZWkR9RFhbIuZdA==
+"@oclif/table@^0.1.24":
+  version "0.1.24"
+  resolved "https://registry.yarnpkg.com/@oclif/table/-/table-0.1.24.tgz#97cc9fc0e65cf4ceb7628084c73eb6ca30bf19b1"
+  integrity sha512-HC5lIdy8Q0crW+ImJhzux3lQ2UobcDM//Tw4+HjTcYi9xzgy1hnKQZ7mYSofgRO42bwN7iZulaLvb8dG1giz0g==
   dependencies:
     "@oclif/core" "^4"
     "@types/react" "^18.3.11"
@@ -1676,15 +1676,15 @@
     string-width "^7.2.0"
     terminal-link "^3.0.0"
 
-"@salesforce/sf-plugins-core@^12.0.2":
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/@salesforce/sf-plugins-core/-/sf-plugins-core-12.0.2.tgz#77e1132678f384ead342c58fdb63326642e95b0c"
-  integrity sha512-7i/Qsp/4eN9kSA0Ix+OdMmlokPHb+QkPCreiJW9hO737GtHKd6lAbT6kdoD/SjrYGQKYUIwJcOCWQ9i9UM9lPw==
+"@salesforce/sf-plugins-core@^12.0.4":
+  version "12.0.4"
+  resolved "https://registry.yarnpkg.com/@salesforce/sf-plugins-core/-/sf-plugins-core-12.0.4.tgz#b78aa0747ab0b861268bf72b2743217a6b0275c5"
+  integrity sha512-fIzr6AZbeY5mqFfDHPyN09eVH0qYkkKVf2jB375YaWZZ8WKTqtYQnwaKd3Gi9asggvMKnmI91ov6aFGKCdA1qg==
   dependencies:
     "@inquirer/confirm" "^3.1.22"
     "@inquirer/password" "^2.2.0"
     "@oclif/core" "^4.0.27"
-    "@oclif/table" "^0.1.22"
+    "@oclif/table" "^0.1.24"
     "@salesforce/core" "^8.5.1"
     "@salesforce/kit" "^3.2.3"
     "@salesforce/ts-types" "^2.0.12"
