@@ -1,3 +1,9 @@
+## [3.3.36](https://github.com/salesforcecli/plugin-limits/compare/3.3.35...3.3.36) (2024-10-21)
+
+### Bug Fixes
+
+- update dependency and new table format ([281874a](https://github.com/salesforcecli/plugin-limits/commit/281874a1a4085eabfea3c83b2c83aec85a18746c))
+
 ## [3.3.35](https://github.com/salesforcecli/plugin-limits/compare/3.3.34...3.3.35) (2024-10-18)
 
 ### Reverts
