@@ -29,7 +29,7 @@ describe('Limits display', () => {
   });
 
   it('Displays the limits (json)', () => {
-    const output = execCmd<ListApiDisplayOutput>(`limits:api:display -u ${username} --json`, {
+    const output = execCmd<ListApiDisplayOutput>(`org:list:limits -o ${username} --json`, {
       ensureExitCode: 0,
     }).jsonOutput;
     expect(output?.result).length.greaterThan(0);
@@ -37,7 +37,7 @@ describe('Limits display', () => {
   });
 
   it('Displays the limits (human readable)', () => {
-    const command = `limits:api:display -u ${username}`;
+    const command = `org:list:limits -o ${username}`;
     const result = execCmd(command, { ensureExitCode: 0 });
     const output = getString(result, 'shellOutput.stdout');
     expect(output).to.include('ActiveScratchOrgs');

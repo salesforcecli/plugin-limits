@@ -25,7 +25,7 @@ describe('recordcounts:display', () => {
   });
 
   it('Displays the records (json)', () => {
-    const output = execCmd<RecordCount[]>(`limits:recordcounts:display -s Account,Contact -u ${username} --json`, {
+    const output = execCmd<RecordCount[]>(`org list sobject record-counts -s Account,Contact -o ${username} --json`, {
       ensureExitCode: 0,
     }).jsonOutput;
     expect(output?.result).length.greaterThan(0);
@@ -36,7 +36,7 @@ describe('recordcounts:display', () => {
   });
 
   it('Displays all records (json)', () => {
-    const output = execCmd<RecordCount[]>(`limits:recordcounts:display -u ${username} --json`, {
+    const output = execCmd<RecordCount[]>(`org list sobject record-counts -o ${username} --json`, {
       ensureExitCode: 0,
     }).jsonOutput;
 
@@ -45,7 +45,7 @@ describe('recordcounts:display', () => {
   });
 
   it('Displays the records (human readable)', () => {
-    const command = `limits:recordcounts:display -s Account -u ${username}`;
+    const command = `org list sobject record-counts -s Account -o ${username}`;
     const result = execCmd(command, { ensureExitCode: 0 });
     const output = getString(result, 'shellOutput.stdout');
     expect(output).to.include('Account');
