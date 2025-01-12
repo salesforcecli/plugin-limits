@@ -1815,11 +1815,11 @@
     wrap-ansi "^9.0.0"
 
 "@oclif/test@^4":
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-4.1.5.tgz#b0e7736ab82f8d0eaf745b74b416bc19e806e594"
-  integrity sha512-w4hVfP+Lsz7toaSnj/E3cFH4Y/nHt1k14cCREQXe/nIqnZW7J6xGnjYEmqU9BPk7m0Lsl52AqJ2hGvLarGhfLw==
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-4.1.7.tgz#310c4e8e666466d11055d887218bd6ce753a7d6f"
+  integrity sha512-KFfPfwCFKOUfqPkBk7Dl204fnQZQUpjib8kG/5RGDLa+IlV11e5d5DQQy3xfJdIGKJ8plg9fP0wjC57a1frt8g==
   dependencies:
-    ansis "^3.5.2"
+    ansis "^3.8.1"
     debug "^4.4.0"
 
 "@pkgjs/parseargs@^0.11.0":
