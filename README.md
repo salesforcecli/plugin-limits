@@ -1,6 +1,6 @@
 # plugin-limits
 
-[![NPM](https://img.shields.io/npm/v/@salesforce/plugin-limits.svg?label=@salesforce/plugin-limits)](https://www.npmjs.com/package/@salesforce/plugin-limits) [![Downloads/week](https://img.shields.io/npm/dw/@salesforce/plugin-limits.svg)](https://npmjs.org/package/@salesforce/plugin-limits) [![License](https://img.shields.io/badge/License-BSD%203--Clause-brightgreen.svg)](https://raw.githubusercontent.com/salesforcecli/plugin-limits/main/LICENSE.txt)
+[![NPM](https://img.shields.io/npm/v/@salesforce/plugin-limits.svg?label=@salesforce/plugin-limits)](https://www.npmjs.com/package/@salesforce/plugin-limits) [![Downloads/week](https://img.shields.io/npm/dw/@salesforce/plugin-limits.svg)](https://npmjs.org/package/@salesforce/plugin-limits) [![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://opensource.org/license/apache-2-0)
 
 A command to display the api limits of your org
 
