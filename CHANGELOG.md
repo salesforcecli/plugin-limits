@@ -1,3 +1,9 @@
+## [3.3.70](https://github.com/salesforcecli/plugin-limits/compare/3.3.69...3.3.70) (2025-10-26)
+
+### Bug Fixes
+
+- **deps:** bump @salesforce/sf-plugins-core from 12.2.4 to 12.2.5 ([46dd7d0](https://github.com/salesforcecli/plugin-limits/commit/46dd7d08c8df21da85bd5bbbb46480c2d8f46430))
+
 ## [3.3.69](https://github.com/salesforcecli/plugin-limits/compare/3.3.68...3.3.69) (2025-10-26)
 
 ### Bug Fixes
