@@ -1,3 +1,9 @@
+## [3.3.81](https://github.com/salesforcecli/plugin-limits/compare/3.3.80...3.3.81) (2026-03-20)
+
+### Bug Fixes
+
+- **deps:** bump flatted from 3.2.7 to 3.4.2 ([edf84bc](https://github.com/salesforcecli/plugin-limits/commit/edf84bc8ac2935416f5a1f981e43f66948e6037e))
+
 ## [3.3.80](https://github.com/salesforcecli/plugin-limits/compare/3.3.79...3.3.80) (2026-03-15)
 
 ### Bug Fixes
