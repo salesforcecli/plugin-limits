@@ -1,3 +1,9 @@
+## [3.3.82](https://github.com/salesforcecli/plugin-limits/compare/3.3.81...3.3.82) (2026-03-27)
+
+### Bug Fixes
+
+- **deps:** bump handlebars from 4.7.8 to 4.7.9 ([b6102c6](https://github.com/salesforcecli/plugin-limits/commit/b6102c6079212b7f3d011a2d8f72d2b6a412e808))
+
 ## [3.3.81](https://github.com/salesforcecli/plugin-limits/compare/3.3.80...3.3.81) (2026-03-20)
 
 ### Bug Fixes
