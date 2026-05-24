@@ -1,3 +1,9 @@
+## [3.3.90](https://github.com/salesforcecli/plugin-limits/compare/3.3.89...3.3.90) (2026-05-24)
+
+### Bug Fixes
+
+- **deps:** bump ws from 8.18.0 to 8.21.0 ([ca95e72](https://github.com/salesforcecli/plugin-limits/commit/ca95e724b504dcb78b38c92dd1345d8f4b5fed26))
+
 ## [3.3.89](https://github.com/salesforcecli/plugin-limits/compare/3.3.88...3.3.89) (2026-05-10)
 
 ### Bug Fixes
