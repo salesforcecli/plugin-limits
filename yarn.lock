@@ -1583,13 +1583,13 @@
   dependencies:
     "@salesforce/ts-types" "^2.0.12"
 
-"@salesforce/plugin-command-reference@^3.1.104":
-  version "3.1.104"
-  resolved "https://registry.yarnpkg.com/@salesforce/plugin-command-reference/-/plugin-command-reference-3.1.104.tgz#101dc5b333a695e2c897ceb37bc0ac98816e7ec0"
-  integrity sha512-Gp1xMBGE/CkPFWyWDMLHcze7E+uC8c6tTAQBVGrKbWp9Gzp3NfLA5nmNFOk0cUpeRXJbm5Png0X6ZJ8F/p256A==
+"@salesforce/plugin-command-reference@^3.1.106":
+  version "3.1.106"
+  resolved "https://registry.yarnpkg.com/@salesforce/plugin-command-reference/-/plugin-command-reference-3.1.106.tgz#4497cfeee718d6f1a873902f2ba931ea809ab028"
+  integrity sha512-6mbePnirGutgEc9q5nlzS6OV3D+cx/EMbiJ0mylTCUUDhDA8BOk1XXGUgw4Yfv7gqZNZVwuKwAGMV8UOuuMJtw==
   dependencies:
     "@oclif/core" "^4"
-    "@salesforce/core" "^8.30.3"
+    "@salesforce/core" "^8.31.0"
     "@salesforce/kit" "^3.2.6"
     "@salesforce/sf-plugins-core" "^12.2.17"
     "@salesforce/ts-types" "^2.0.11"
