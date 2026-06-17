@@ -1,3 +1,9 @@
+## [3.3.96](https://github.com/salesforcecli/plugin-limits/compare/3.3.95...3.3.96) (2026-06-17)
+
+### Bug Fixes
+
+- **deps:** bump form-data from 4.0.5 to 4.0.6 ([226b752](https://github.com/salesforcecli/plugin-limits/commit/226b7522665676f8d8aad115971faf0ed50f2ee9))
+
 ## [3.3.95](https://github.com/salesforcecli/plugin-limits/compare/3.3.94...3.3.95) (2026-06-17)
 
 ### Bug Fixes
