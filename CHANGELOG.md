@@ -1,3 +1,9 @@
+## [3.3.100](https://github.com/salesforcecli/plugin-limits/compare/3.3.99...3.3.100) (2026-07-12)
+
+### Bug Fixes
+
+- **deps:** bump @salesforce/core from 8.31.5 to 8.32.2 ([ed6032f](https://github.com/salesforcecli/plugin-limits/commit/ed6032fecd338da1c4d026aaebb3eaa5230e7839))
+
 ## [3.3.99](https://github.com/salesforcecli/plugin-limits/compare/3.3.98...3.3.99) (2026-07-12)
 
 ### Bug Fixes
