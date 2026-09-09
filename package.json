@@ -7,7 +7,7 @@
   "enableO11y": true,
   "o11yUploadEndpoint": "https://794testsite.my.site.com/byolwr/webruntime/log/metrics",
   "dependencies": {
-    "@salesforce/core": "^9.1.9",
+    "@salesforce/core": "^9.1.11",
     "@salesforce/sf-plugins-core": "^13.0.4"
   },
   "devDependencies": {
@@ -15,19 +15,19 @@
     "@oclif/plugin-command-snapshot": "^6.0.0",
     "@oclif/test": "^5.0.0",
     "@salesforce/cli-plugins-testkit": "^5.3.66",
-    "@salesforce/dev-scripts": "^13.0.2",
-    "@salesforce/plugin-command-reference": "^3.1.132",
-    "@salesforce/ts-types": "^3.0.1",
+    "@salesforce/dev-scripts": "^14.0.0",
+    "@salesforce/plugin-command-reference": "^3.1.133",
+    "@salesforce/ts-types": "^3.2.0",
     "@types/chai": "^4.3.17",
     "@types/mocha": "^10.0.10",
     "@types/node": "^18",
     "@types/sinon": "^10.0.20",
     "eslint": "^10.4.0",
-    "eslint-config-salesforce-typescript": "^6.0.0",
+    "eslint-config-salesforce-typescript": "^7.0.0",
     "eslint-plugin-sf-plugin": "^3.0.0",
     "oclif": "^5.0.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "typescript": "^6.0.0"
   },
   "config": {},
   "engines": {
