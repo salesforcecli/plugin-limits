@@ -1,3 +1,9 @@
+## [4.0.6](https://github.com/salesforcecli/plugin-limits/compare/4.0.5...4.0.6) (2026-09-30)
+
+### Bug Fixes
+
+- **deps:** bump @salesforce/core from 9.1.11 to 9.2.0 ([7e90e96](https://github.com/salesforcecli/plugin-limits/commit/7e90e96d89c7d6d086dcf497499a41723de4ebcb))
+
 ## [4.0.5](https://github.com/salesforcecli/plugin-limits/compare/4.0.4...4.0.5) (2026-09-01)
 
 ### Bug Fixes
