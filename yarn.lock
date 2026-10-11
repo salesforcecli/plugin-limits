@@ -1282,10 +1282,10 @@
     ts-retry-promise "^0.8.1"
     zod "^4.1.12"
 
-"@salesforce/core@^9.1.4", "@salesforce/core@^9.1.9", "@salesforce/core@^9.2.0":
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-9.2.0.tgz#3067352aebe614cd8f2d061763e8c7a5280eb182"
-  integrity sha512-kiyl1iblLF9oIVfZzDCbtl8n9BHCXDCq2Mrg3W9+AB5ds3tvJHEGiITxuqcfy8AecFnkc/rBpERjvEpZLwrJyQ==
+"@salesforce/core@^9.1.4", "@salesforce/core@^9.1.9", "@salesforce/core@^9.3.1":
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-9.3.1.tgz#b5669d5865569e4436a304cb9d25082a00904326"
+  integrity sha512-065I/An9MCXJXmAm6CCqztq7NUSUBeFBNi439aUJ1PGBtLMucFYdOYPWAhZqxOSrisgzN3VLRGG2D61lZ7sHTQ==
   dependencies:
     "@jsforce/jsforce-node" "^3.10.24"
     "@salesforce/kit" "^4.0.0"
